@@ -1,0 +1,1 @@
+This folder contains all the source code which is used to collect the features represented by the neurons after the network is trained.

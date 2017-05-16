@@ -1,0 +1,1 @@
+This folder contains all the source code to implement the Convolutionnal Neural Network Model for sentence classification.
