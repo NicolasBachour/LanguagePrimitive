@@ -27,7 +27,9 @@ def main(argv):
 
     neural_network = nn.NeuralNetwork()
 
-    neural_network.run(np.random.random([6, 300]).astype(np.float32))
+    #test = [[0] * 300, [1] * 300, [2] * 300, [3] * 300, [4] * 300, [5] * 300, [6] * 300]
+    test = np.random.random([6, 300]).astype(np.float32)
+    neural_network.run(test)
 
     #neural_network.train(vector_input_data) # FUTURE
     #neural_network.save("./SAVES") # FUTURE
