@@ -98,10 +98,10 @@ class NeuralNetwork:
     def __map_input(self, input, count):
         mapped_input = []
         sentence_length = len(input)
-        for i in range(0, sentence_length - count + 1):
+        for i in xrange(0, sentence_length - count + 1):
             mapped_input.append([])
             mapped_input[i].append([])
-            for j in range(0, count):
+            for j in xrange(0, count):
                 mapped_input[i][0].extend(input[i + j])
         return mapped_input
 
