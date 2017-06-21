@@ -1,33 +1,38 @@
 
 import numpy as np
+from collections import defaultdict
 
 class LookupTable:
     def __init__(self):
-        self.table = dict()
-        self.vector_dimension = 0
+        self.table = defaultdict(lambda: np.random.random([self.vector_dimention]).astype(np.float32) * 2 - 1)
+        self.vector_dimention = 0
         return
 
     def load(self, filename):
 
         file = open(filename, "rb")
         # File properties
-        dictionnary_size, self.vector_dimension = map(int, file.readline().split())
+        dictionnary_size, self.vector_dimention = map(int, file.readline().split())
 
-        vector_size = np.dtype('float32').itemsize * self.vector_dimension
+        vector_size = np.dtype('float32').itemsize * self.vector_dimention
 
         for i in xrange(0, dictionnary_size):
-            word = []
+            word = ""
             while True:
-                ch = file.read(1)
-                if ch == ' ':
-                    word = ''.join(word)
+                c = file.read(1)
+                if c == ' ':
                     break
-                if ch != '\n':
-                    word.append(ch)
+                if c != '\n':
+                    word += c
             self.table[word] = np.fromstring(file.read(vector_size), dtype='float32')
-#        self.table = word_vecs
         return
 
     def lookup(self, word):
-        # What to do in case of error ?
         return self.table[word]
+
+    def convertSentence(self, sentence):
+        sentence_vectors = []
+        words = sentence.split()
+        for w in words:
+            sentence_vectors.append(self.table[w])
+        return sentence_vectors

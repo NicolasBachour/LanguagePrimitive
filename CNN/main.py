@@ -26,17 +26,28 @@ def main(argv):
     word2vec = lt.LookupTable()
     word2vec.load(argv[2])
 
-    ### Map words in sentences to word vectors ###
-
     ### Create Neural network, train it, and save it ###
-    neural_network = nn.NeuralNetwork()
+    neural_network = nn.NeuralNetwork(word2vec.vector_dimention)
 
     ### TESTS ###
     #sentence = [[0] * 300, [1] * 300, [2] * 300, [3] * 300, [4] * 300, [5] * 300, [6] * 300]
-    sentence = np.random.random([6, 300]).astype(np.float32)
+    #sentence = np.random.random([6, 300]).astype(np.float32)
+    sentence = ""
+    while sentence != "EXIT":
+        sentence = raw_input("Enter sentence : ")
+        svector = word2vec.convertSentence(sentence)
+        neural_network.run(svector)
     #############
 
-    neural_network.run(sentence)
+    ### Map words in sentences to word vectors ###
+#    i = 0
+#    for sentence in data[neg]:
+#        word2vec.convertSentence()
+#        neural_network.run(sentence)
+#        i += 1 # DEBUG
+#        if (i == 4)
+#            break
+
     #neural_network.train(vector_input_data) # FUTURE
     #neural_network.save("./SAVES") # FUTURE
     return

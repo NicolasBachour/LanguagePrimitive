@@ -6,18 +6,20 @@ import numpy as np
 import tensorflow as tf
 
 class NeuralNetwork:
-    def __init__(self):
+    def __init__(self, vector_dimention):
+
+        self.vector_dimention = vector_dimention
 
         self.kernels = {}
 
-        # Create 100 kernels of 3 * 300
-        self.kernels[3] = tf.Variable(self.__shape_to_variables([1, 3 * 300, 100]), tf.float32)
+        # Create 100 kernels of 3 * k
+        self.kernels[3] = tf.Variable(self.__shape_to_variables([1, 3 * self.vector_dimention, 100]), tf.float32)
 
-        # Create 100 kernels of 4 * 300
-        self.kernels[4] = tf.Variable(self.__shape_to_variables([1, 4 * 300, 100]), tf.float32)
+        # Create 100 kernels of 4 * k
+        self.kernels[4] = tf.Variable(self.__shape_to_variables([1, 4 * self.vector_dimention, 100]), tf.float32)
 
-        # Create 100 kernels of 5 * 300
-        self.kernels[5] = tf.Variable(self.__shape_to_variables([1, 5 * 300, 100]), tf.float32)
+        # Create 100 kernels of 5 * k
+        self.kernels[5] = tf.Variable(self.__shape_to_variables([1, 5 * self.vector_dimention, 100]), tf.float32)
 
         # Create 300 * 2 weights for the output layer (2 classes : positive + negative)
         self.hidden_layer_weights = tf.Variable(self.__shape_to_variables([300, 2]), tf.float32)
@@ -36,9 +38,14 @@ class NeuralNetwork:
 
         sentence_length = len(input_data) # refered as n in calculations below
 
-        convoluted_input_3 = tf.placeholder(tf.float32, shape = [sentence_length - 2, 1, 3 * 300])  # of shape (n - h + 1), 1, hk
-        convoluted_input_4 = tf.placeholder(tf.float32, shape = [sentence_length - 3, 1, 4 * 300])  # of shape (n - h + 1), 1, hk
-        convoluted_input_5 = tf.placeholder(tf.float32, shape = [sentence_length - 4, 1, 5 * 300])  # of shape (n - h + 1), 1, hk
+        # If input data is too short, add padding
+        while sentence_length < 5:
+            input_data.append(np.zeros(self.vector_dimention, dtype=np.float32))
+            sentence_length += 1
+
+        convoluted_input_3 = tf.placeholder(tf.float32, shape = [sentence_length - 2, 1, 3 * self.vector_dimention])  # of shape (n - h + 1), 1, hk
+        convoluted_input_4 = tf.placeholder(tf.float32, shape = [sentence_length - 3, 1, 4 * self.vector_dimention])  # of shape (n - h + 1), 1, hk
+        convoluted_input_5 = tf.placeholder(tf.float32, shape = [sentence_length - 4, 1, 5 * self.vector_dimention])  # of shape (n - h + 1), 1, hk
 
         # Tile the input matrix in the three "convoluted_input"
         convoluted_input_3_values = self.__map_input(input_data, 3)
