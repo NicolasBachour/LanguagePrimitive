@@ -16,18 +16,13 @@ def main(argv):
     print("Loading dataset...")
     data = parser.load_dataset(argv[1])
 
-    #for line in content:
-    #    print("\t" + line)
-    #content = [x.strip() for x in content]
-    #print("\t" + filename + " in " + folder)
-
     ### Loading word vectors ###
     print("Loading word vectors...")
     word2vec = lt.LookupTable()
     word2vec.load(argv[2])
 
     ### Create Neural network, train it, and save it ###
-    neural_network = nn.NeuralNetwork(word2vec.vector_dimention)
+    neural_network = nn.NeuralNetwork(word2vec.vector_dimention, 25)
 
     ### TESTS ###
     #sentence = [[0] * 300, [1] * 300, [2] * 300, [3] * 300, [4] * 300, [5] * 300, [6] * 300]
@@ -48,7 +43,7 @@ def main(argv):
 #        if (i == 4)
 #            break
 
-    #neural_network.train(vector_input_data) # FUTURE
+    #neural_network.train(vector_input_data, [1, 0]) # FUTURE
     #neural_network.save("./SAVES") # FUTURE
     return
 
