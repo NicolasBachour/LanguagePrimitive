@@ -1,6 +1,6 @@
 
 import sys
-from itertools import islice
+import random
 
 import parser
 
@@ -24,31 +24,68 @@ def main(argv):
     word2vec.load(argv[2])
 
     ### Create Neural network, train it, and save it ###
-    neural_network = nn.NeuralNetwork(word2vec.vector_dimention, 25)
+    neural_network = nn.NeuralNetwork(word2vec.vector_dimension, 25)
 
     ### TESTS ###
     #sentence = [[0] * 300, [1] * 300, [2] * 300, [3] * 300, [4] * 300, [5] * 300, [6] * 300]
     #sentence = np.random.random([6, 300]).astype(np.float32)
 
-    training_set_pos_length = len(data["neg"]) / 100
-    training_set_neg_length = len(data["pos"]) / 100
+    positive_reviews = sum(len(file) for file in data["neg"])
+    negative_reviews = sum(len(file) for file in data["pos"])
+    cv_reviews = (positive_reviews + negative_reviews) / 10
 
-    training_data = list(islice(data["neg"], training_set_neg_length)) + list(islice(data["pos"], training_set_pos_length))
-    training_set = []
-    for sentence in training_data:
-        training_set.append(word2vec.convertSentence(sentence))
+    print("Reading {0} positive reviews...".format(positive_reviews))
+    print("Reading {0} negative reviews...".format(negative_reviews))
+    print("Picking {0} reviews from the set for cross-validation...".format(cv_reviews))
 
-    neural_network.set_training_set(training_set,
-                                    ([[0.0, 1.0]] * training_set_neg_length) + ([[1.0, 0.0]] * training_set_pos_length),
-                                    training_set_neg_length + training_set_pos_length
-                                    )
-    #neural_network.train()
+#    training_data = []
+    training_set_input = []
+    training_set_target = []
+    random.seed()
+    for i in xrange(cv_reviews):
+        sample_class = random.choice(data.keys())
+        sample = random.choice(data[sample_class].keys())
+        sentence = random.randint(0, len(data[sample_class][sample]) - 1)
 
-    sentence = ""
-    while sentence != "EXIT":
-        sentence = raw_input("Enter sentence : ")
-        svector = word2vec.convertSentence(sentence)
-        neural_network.run(svector)
+        #print("{0} : {1}".format(i, data[sample_class][sample][sentence]))
+        #training_data.append(data[sample_class][sample][sentence])
+        training_set_input.append(word2vec.convertSentence(data[sample_class][sample][sentence]))
+        training_set_target.append([1.0, 0.0] if sample_class == "pos" else [0.0, 1.0])
+        #DEBUG ?
+        del data[sample_class][sample][sentence]
+        if len(data[sample_class][sample]) == 0:
+            del data[sample_class][sample]
+
+
+#    training_data = list(islice(data["neg"], training_set_neg_length)) + list(islice(data["pos"], training_set_pos_length))
+
+#    for sample in training_data:
+#        print(sample)
+#        for sentence in sample:
+#            #print(sentence)
+#            training_set.append(word2vec.convertSentence(sentence))
+
+    neural_network.set_training_set(training_set_input, training_set_target, 1)
+
+    validation_set_input = []
+    validation_set_target = []
+    for x in data["pos"]:
+        for sentence in x:
+            validation_set_input.append(word2vec.convertSentence(sentence))
+            validation_set_target.append([1.0, 0.0])
+    for x in data["neg"]:
+        for sentence in x:
+            validation_set_input.append(word2vec.convertSentence(sentence))
+            validation_set_target.append([0.0, 1.0])
+
+    neural_network.accuracy(training_set_input, training_set_target)
+    neural_network.accuracy(validation_set_input, validation_set_target)
+
+#    sentence = ""
+#    while sentence != "EXIT":
+#        sentence = raw_input("Enter sentence : ")
+#        svector = word2vec.convertSentence(sentence)
+#        neural_network.run(svector)
     #############
 
     ### Map words in sentences to word vectors ###
