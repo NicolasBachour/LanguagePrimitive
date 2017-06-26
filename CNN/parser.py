@@ -18,7 +18,10 @@ def load_recursive(folder, dirstack):
             data[filename] = subdir_data
         else:
             file = open(filename, 'r')
-            data[filename] = file.readlines()
-            data[filename] = [x.strip() for x in data[filename]]
+            data[filename] = []
+            lines = file.readlines()
+            lines = [x.strip() for x in lines]
+            for line in lines:
+                data[filename].append(line.split())
     dirstack.popd()
     return collections.OrderedDict(sorted(data.items()))
