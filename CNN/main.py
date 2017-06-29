@@ -25,7 +25,7 @@ def main(argv):
 
     integer_sentences = [[], []]
     max_sentence_length = max(len(line) for label in data for file in data[label] for line in data[label][file])
-    print("Max sentence length is {0}".format(max_sentence_length))
+    print("Max sentence length is {0}. Sentences will be padded to this size to make the use of batches possible.".format(max_sentence_length))
     i = 0
     for label in data:
         for file in data[label]:
@@ -51,20 +51,17 @@ def main(argv):
     for i in xrange(cv_reviews):
         sample_class = random.randint(0, len(integer_sentences) - 1)
         sentence = random.randint(0, len(integer_sentences[sample_class]) - 1)
-
-        #print("{0} : {1}".format(i, integer_sentences[sample_class][sentence]))
-
         training_set_input.append(integer_sentences[sample_class][sentence])
         training_set_target.append([1.0, 0.0] if sample_class == 0 else [0.0, 1.0])
-
         del integer_sentences[sample_class][sentence]
 
     for class_idx, sample_class in enumerate(integer_sentences):
         for sentence in xrange(len(sample_class)):
             validation_set_input.append(sample_class[sentence])
-            validation_set_target.append([1.0, 0.0] if sample_class == 0 else [0.0, 1.0])
+            validation_set_target.append([1.0, 0.0] if class_idx == 0 else [0.0, 1.0])
 
     ### Create Neural network, train it, and save it ###
+    print("Creating network...")
     neural_network = nn.NeuralNetwork(number_of_classes = 2,
                                       vector_dimension = word2vec.getWordDimension(),
                                       vocabulary_size = word2vec.getVocabularySize(),
@@ -72,14 +69,18 @@ def main(argv):
                                       dictionnary = word2vec.getLookupTable())
 
     ### TESTS ###
-    print("Accuracy tests")
+    print("------ Accuracy test before training on training set")
     neural_network.accuracy(training_set_input, training_set_target)
-    neural_network.accuracy(validation_set_input, validation_set_target)
 
-    neural_network.set_training_set(training_set_input, training_set_target, 50)
+    print("------ Training network")
+    for i in xrange(0, 25):
+        print("Epoch {0}/25".format(i))
+        neural_network.train(training_set_input, training_set_target, 50)
 
-    print("Accuracy tests")
+    print("------ Final accuracy tests")
+    print("--- Training set")
     neural_network.accuracy(training_set_input, training_set_target)
+    print("--- CV set")
     neural_network.accuracy(validation_set_input, validation_set_target)
 
     #neural_network.save("./SAVES") # FUTURE
