@@ -1,6 +1,7 @@
 
 from sys import stdout
 
+import os
 import numpy as np
 import tensorflow as tf
 
@@ -12,19 +13,19 @@ class NeuralNetwork:
         ### Creating weights ###
         # Create 100 kernels of 3 * k, 100 kernels of 4 * k, 100 kernels of 5 * k
         self.kernels = {
-            3 : tf.Variable(self.__shape_to_variables([3, self.vector_dimension, 1, 100]), tf.float32),
-            4 : tf.Variable(self.__shape_to_variables([4, self.vector_dimension, 1, 100]), tf.float32),
-            5 : tf.Variable(self.__shape_to_variables([5, self.vector_dimension, 1, 100]), tf.float32)
+            3 : tf.Variable(self.__shape_to_variables([3, self.vector_dimension, 1, 100])),
+            4 : tf.Variable(self.__shape_to_variables([4, self.vector_dimension, 1, 100])),
+            5 : tf.Variable(self.__shape_to_variables([5, self.vector_dimension, 1, 100]))
         }
 
         self.biases = {
-            3 : tf.Variable(tf.constant(0.1, shape = [100]), tf.float32),
-            4 : tf.Variable(tf.constant(0.1, shape = [100]), tf.float32),
-            5 : tf.Variable(tf.constant(0.1, shape = [100]), tf.float32)
+            3 : tf.Variable(tf.constant(0.1, shape = [100])),
+            4 : tf.Variable(tf.constant(0.1, shape = [100])),
+            5 : tf.Variable(tf.constant(0.1, shape = [100]))
         }
 
         # Create 300 * 2 weights for the output layer (2 classes : positive + negative)
-        self.hidden_layer_weights = tf.Variable(self.__shape_to_variables([300, number_of_classes]), tf.float32)
+        self.hidden_layer_weights = tf.Variable(self.__shape_to_variables([300, number_of_classes]))
         self.hidden_layer_biases = tf.Variable(tf.constant(0.1, shape = [number_of_classes]))
         
         self.dropout_rate = tf.placeholder(tf.float32)
@@ -33,10 +34,10 @@ class NeuralNetwork:
         self.input_sentence = tf.placeholder(tf.int32, shape = [None, sentence_length])
         self.input_dictionnary = tf.placeholder(tf.float32, shape = [vocabulary_size, vector_dimension])
 
-        with tf.device('/cpu:0'), tf.name_scope("embedding"):
-            self.dictionnary = tf.Variable(self.input_dictionnary, tf.float32)
-            self.embedded_chars = tf.nn.embedding_lookup(self.dictionnary, self.input_sentence)
-            self.embedded_chars_expanded = tf.expand_dims(self.embedded_chars, -1)
+        #with tf.device('/cpu:0'), tf.name_scope("embedding"):
+        self.dictionnary = tf.Variable(self.input_dictionnary, trainable = False)
+        self.embedded_chars = tf.nn.embedding_lookup(self.dictionnary, self.input_sentence)
+        self.embedded_chars_expanded = tf.expand_dims(self.embedded_chars, -1)
 
         self.convolution_3_output = tf.nn.conv2d(
             self.embedded_chars_expanded,
@@ -70,8 +71,8 @@ class NeuralNetwork:
         self.output = tf.nn.xw_plus_b(tf.nn.dropout(feature_vector, self.dropout_rate), self.hidden_layer_weights, self.hidden_layer_biases)
 
         ####### Training ######
-
         self.optimiser = tf.train.AdadeltaOptimizer(learning_rate = 1.0)
+        #self.optimiser = tf.train.AdamOptimizer(learning_rate = 1e-4)
         self.training_labels = tf.placeholder(tf.float32, shape = [None, number_of_classes])
 
         losses = tf.nn.softmax_cross_entropy_with_logits(self.output, self.training_labels)
@@ -79,12 +80,17 @@ class NeuralNetwork:
 
         self.global_step = tf.Variable(0, name="global_step", trainable=False)
         self.grads_and_vars = self.optimiser.compute_gradients(self.loss)
-        self.optimisation_step = self.optimiser.apply_gradients(self.grads_and_vars, global_step=self.global_step)
+
+        #grads_and_vars = optimizer.compute_gradients(loss, [weights1, weights2, ...])
+        self.capped_grads_and_vars = [(tf.clip_by_norm(gv[0], clip_norm = 3.0, axes = None), gv[1]) for gv in self.grads_and_vars]
+        # Ask the optimizer to apply the capped gradients
+        self.optimisation_step = self.optimiser.apply_gradients(self.capped_grads_and_vars, global_step=self.global_step)
 
         #Accuracy test
-        self.predictions = tf.argmax(self.output, 1)
-        correct_predictions = tf.equal(self.predictions, tf.argmax(self.training_labels, 1))
+        correct_predictions = tf.equal(tf.argmax(self.output, 1), tf.argmax(self.training_labels, 1))
         self.accuracy_value = tf.reduce_mean(tf.cast(correct_predictions, "float"))
+
+        self.saver = tf.train.Saver(tf.global_variables())
 
         self.session = tf.Session()
         self.session.run(tf.global_variables_initializer(), {self.input_dictionnary : dictionnary})
@@ -93,12 +99,11 @@ class NeuralNetwork:
     def train(self, training_set, target_labels, batch_size):
 
         ### RUN OPTIMISATION ###
-        #print("Starting optimisation...")
         begin = 0
         end = batch_size
         while begin < len(training_set):
             _, loss = self.session.run([self.optimisation_step, self.loss], feed_dict = {
-                self.dropout_rate : 0.5,
+                self.dropout_rate : 1.0,
                 self.training_labels : target_labels[begin:end],
                 self.input_sentence : training_set[begin:end]
             })
@@ -108,16 +113,9 @@ class NeuralNetwork:
             begin += batch_size
             end += batch_size
         stdout.write("\n")
-        #print("Finished optimisation !")
         return
-
-    def run(self, input_data, subdivision):
-
-
-        return results
     
-    def accuracy(self, input, target, subdivision = 100):
-        print("Success rate :")
+    def accuracy(self, input, target, subdivision = 500):
         results = []
         begin = 0
         end = subdivision
@@ -129,20 +127,19 @@ class NeuralNetwork:
             }))
             begin += subdivision
             end += subdivision
-        print(sum(results) / len(results))
+        return sum(results) / len(results)
+
+    def save(self, destination):
+        folder = os.path.abspath(destination)
+        # Create directory if not already existing
+        if not os.path.exists(folder):
+            os.makedirs(folder)
+        self.saver.save(self.session, folder)
         return
 
-    def save(destination):
-        # open file and save as a format as raw as possible
-
-        # Checkpointing
-        #checkpoint_dir = os.path.abspath(os.path.join(out_dir, "checkpoints"))
-        #checkpoint_prefix = os.path.join(checkpoint_dir, "model")
-        ## Tensorflow assumes this directory already exists so we need to create it
-        #if not os.path.exists(checkpoint_dir):
-        #    os.makedirs(checkpoint_dir)
-        #saver = tf.train.Saver(tf.all_variables()
-
+    def restore(self, destination):
+        folder = os.path.abspath(destination)
+        self.saver.restore(self.session, folder)
         return
 
     ########################
@@ -150,5 +147,4 @@ class NeuralNetwork:
     ########################
 
     def __shape_to_variables(self, shape):
-        # DEBUG
         return tf.truncated_normal(shape, stddev = 0.1)

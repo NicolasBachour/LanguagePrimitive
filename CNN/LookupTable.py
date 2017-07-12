@@ -8,6 +8,11 @@ class LookupTable:
         self.vector_dimension = 0
         return
 
+    def __enter__(self):
+        return self
+    def __exit__(self, *err):
+        return
+
     def load(self, filename):
 
         file = open(filename, "rb")

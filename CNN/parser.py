@@ -11,7 +11,6 @@ def load_dataset(folder):
 def load_recursive(folder, dirstack):
     data = dict()
     dirstack.pushd(folder)
-
     for filename in os.listdir("./"):
         if os.path.isdir(filename):
             subdir_data = load_recursive(filename, dirstack)
