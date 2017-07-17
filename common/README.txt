@@ -1,0 +1,1 @@
+This folder contains "librairy" files which are commonly used by both of the solutions.

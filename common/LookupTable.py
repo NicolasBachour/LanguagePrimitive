@@ -11,6 +11,8 @@ class LookupTable:
     def __enter__(self):
         return self
     def __exit__(self, *err):
+        del self.lookup_table
+        del self.word_to_int
         return
 
     def load(self, filename):

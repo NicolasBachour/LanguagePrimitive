@@ -1,7 +1,7 @@
 
 import os
 import collections
-from utilities import DirectoryStack as utils
+import DirectoryStack as utils
 
 def load_dataset(folder):
     dirstack = utils.DirectoryStack()
