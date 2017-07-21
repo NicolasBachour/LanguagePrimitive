@@ -36,17 +36,28 @@ def main(argv):
                     sentence_set["input"].append(word2vec.convertSentence(line, max_sentence_length))
                     sentence_set["target"].append([1.0, 0.0] if i == 0 else [0.0, 1.0])
 
-        print("Creating network...")
+        print("Creating static network...")
         neural_network = nn.NeuralNetwork(number_of_classes = 2,
                                           vector_dimension = word2vec.getWordDimension(),
                                           vocabulary_size = word2vec.getVocabularySize(),
                                           sentence_length = max_sentence_length,
-                                          dictionnary = word2vec.getLookupTable())
+                                          dictionnary = word2vec.getLookupTable(),
+                                          is_trainable = False)
 
-        print("Restoring weights...")
-        neural_network.restore(os.path.join(argv[3], "Save"))
+#        print("Restoring weights...")
+#        neural_network.restore(os.path.join(argv[3], "Save"))
 
-        
+        #-------------------------
+
+        #print("Searching for neurons with highly variable activation...")
+        #neuron_x, neuron_y = neural_network.search_variable_neuron()
+
+        print("Maximising neuron...")
+        maximiser = neural_network.create_kernel_maximiser(3, 72)
+        maximiser.run()
+
+        #maximiser = neural_network.create_kernel_maximiser(3, 72)
+        #maximiser = neural_network.create_kernel_maximiser(3, 72)
 
     return
 

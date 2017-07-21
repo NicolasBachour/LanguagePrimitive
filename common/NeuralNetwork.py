@@ -6,7 +6,7 @@ import numpy as np
 import tensorflow as tf
 
 class NeuralNetwork:
-    def __init__(self, number_of_classes, vector_dimension, sentence_length, vocabulary_size, dictionnary, is_trainable = False):
+    def __init__(self, number_of_classes, vector_dimension, sentence_length, vocabulary_size, dictionnary, is_trainable=False):
         ### Network settings ###
         self.vector_dimension = vector_dimension
 
@@ -17,7 +17,8 @@ class NeuralNetwork:
         self.training_labels = tf.placeholder(tf.float32, shape = [None, number_of_classes])
 
         ### Creating weights ###
-        # Create 100 kernels of 3 * k, 100 kernels of 4 * k, 100 kernels of 5 * k
+        # Create 100 kernels of 3 * k, 100 kernels of 4 * k, 100 kernels of 5 *
+        # k
         self.kernels = {
             3 : tf.Variable(self.__shape_to_variables([3, self.vector_dimension, 1, 100]), trainable = is_trainable),
             4 : tf.Variable(self.__shape_to_variables([4, self.vector_dimension, 1, 100]), trainable = is_trainable),
@@ -30,7 +31,8 @@ class NeuralNetwork:
             5 : tf.Variable(self.__shape_to_variables([100]), trainable = is_trainable)
         }
 
-        # Create 300 * 2 weights for the output layer (2 classes : positive + negative)
+        # Create 300 * 2 weights for the output layer (2 classes : positive +
+        # negative)
         self.hidden_layer_weights = tf.Variable(self.__shape_to_variables([300, number_of_classes]), trainable = is_trainable)
         self.hidden_layer_bias = tf.Variable(self.__shape_to_variables([number_of_classes]), trainable = is_trainable)
 
@@ -40,18 +42,15 @@ class NeuralNetwork:
         self.embedded_chars = tf.nn.embedding_lookup(self.dictionnary, self.input_sentence)
         self.embedded_chars_expanded = tf.expand_dims(self.embedded_chars, -1)
 
-        self.convolution_3_output = tf.nn.conv2d(
-            self.embedded_chars_expanded,
+        self.convolution_3_output = tf.nn.conv2d(self.embedded_chars_expanded,
             self.kernels[3],
             strides = [1, 1, 1, 1],
             padding = "VALID")
-        self.convolution_4_output = tf.nn.conv2d(
-            self.embedded_chars_expanded,
+        self.convolution_4_output = tf.nn.conv2d(self.embedded_chars_expanded,
             self.kernels[4],
             strides = [1, 1, 1, 1],
             padding = "VALID")
-        self.convolution_5_output = tf.nn.conv2d(
-            self.embedded_chars_expanded,
+        self.convolution_5_output = tf.nn.conv2d(self.embedded_chars_expanded,
             self.kernels[5],
             strides = [1, 1, 1, 1],
             padding = "VALID")
@@ -75,13 +74,12 @@ class NeuralNetwork:
         losses = tf.nn.softmax_cross_entropy_with_logits(self.output, self.training_labels)
         self.loss = tf.reduce_mean(losses)
 
-        # Ask the optimizer compute gradients, apply l2 constraint, and to apply the gradients
-        self.grads_and_vars = self.optimiser.compute_gradients(self.loss, [
-            #self.dictionnary,
+        # Ask the optimiser compute gradients, apply l2 constraint, and to
+        # apply the gradients
+        self.grads_and_vars = self.optimiser.compute_gradients(self.loss, [#self.dictionnary,
             self.kernels[3], self.kernels[4], self.kernels[5],
             self.biases[3], self.biases[4], self.biases[5],
-            self.hidden_layer_weights, self.hidden_layer_bias
-        ])
+            self.hidden_layer_weights, self.hidden_layer_bias])
         self.capped_grads_and_vars = [(tf.clip_by_norm(gv[0], clip_norm = 3.0, axes = None), gv[1]) for gv in self.grads_and_vars] # TRUC LOUCHE
         self.optimisation_step = self.optimiser.apply_gradients(self.capped_grads_and_vars, global_step = self.global_step)
 
@@ -90,7 +88,7 @@ class NeuralNetwork:
         self.accuracy_value = tf.reduce_mean(tf.cast(correct_predictions, "float"))
 
         ### Saver ###
-        self.saver = tf.train.Saver(tf.global_variables())
+        self.saver = tf.train.Saver(tf.global_variables() + [self.global_step])
 
         ## Session and initialisation ##
         self.session = tf.Session()
@@ -115,7 +113,7 @@ class NeuralNetwork:
         stdout.write("\n")
         return
     
-    def accuracy(self, input, target, subdivision = 500):
+    def accuracy(self, input, target, subdivision=500):
         results = []
         begin = 0
         end = subdivision
@@ -148,3 +146,46 @@ class NeuralNetwork:
 
     def __shape_to_variables(self, shape):
         return tf.truncated_normal(shape, stddev = 0.1)
+
+    ##############################
+    ### MAXIMIZATION FUNCTIONS ###
+    ##############################
+
+    def create_kernel_maximiser(self, kernel_size, neuron_index):
+
+        maximiser_input = tf.Variable(tf.random_uniform([1, kernel_size, self.vector_dimension, 1], 0.0, 1.0), trainable = True)
+        kernel = tf.slice(self.kernels[kernel_size], [0, 0, 0, neuron_index], [kernel_size, self.vector_dimension, 1, 1])
+
+        print(kernel)
+        print(tf.shape(kernel))
+
+        output = tf.nn.conv2d(maximiser_input,
+            kernel,
+            strides = [1, 1, 1, 1],
+            padding = "VALID")
+
+        return Maximiser(self.session, maximiser_input, output)
+
+class Maximiser:
+    def __init__(self, session, input, value_to_optimise):
+
+        self.session = session
+        self.result = input
+        self.value_to_optimise = value_to_optimise
+
+        ### Create optimiser ###
+        self.optimiser = tf.train.GradientDescentOptimizer(1.0)
+        self.ratio = tf.div(tf.constant(1.0, tf.float32), self.value_to_optimise)
+        self.optimisation_step = self.optimiser.minimize(self.ratio)
+        return
+
+    def run(self):
+        self.session.run(tf.variables_initializer([self.result]))
+        print(self.session.run(tf.squeeze(self.result)))
+        for i in xrange(500):
+            _, value = self.session.run([self.optimisation_step, self.ratio])
+            stdout.write("\r%f  " % value)
+            stdout.flush()
+        stdout.write("\n")
+        print(self.session.run(tf.squeeze(self.result)))
+        return

@@ -49,8 +49,16 @@ def main(argv):
         for k in xrange(CROSS_VALIDATION__FOLD):
             data_subsets.append({ "input" : [], "target" : [] })
             for i in xrange(cv_reviews):
-                sample_class = random.randint(0, len(integer_sentences) - 1)
-                sentence = random.randint(0, len(integer_sentences[sample_class]) - 1)
+                sample_class = None
+                if len(integer_sentences[0]) == 0:
+                    sample_class = 1
+                elif len(integer_sentences[1]) == 0:
+                    sample_class = 0
+                else:
+                    sample_class = random.randint(0, len(integer_sentences) - 1)
+                sentence = 0
+                if (len(integer_sentences[sample_class]) - 1) > 0:
+                    sentence = random.randint(0, len(integer_sentences[sample_class]) - 1)
                 data_subsets[k]["input"].append(integer_sentences[sample_class][sentence])
                 data_subsets[k]["target"].append([1.0, 0.0] if sample_class == 0 else [0.0, 1.0])
                 del integer_sentences[sample_class][sentence]
@@ -72,9 +80,9 @@ def main(argv):
         training_set = { "input" : [], "target" : [] }
         for i in xrange(CROSS_VALIDATION__FOLD):
             if (i != k):
-                training_set["input"].append(data_subsets[i]["input"])
-                training_set["target"].append(data_subsets[i]["target"])
-
+                training_set["input"] += data_subsets[i]["input"]
+                training_set["target"] += data_subsets[i]["target"]
+        
         epoch = 0
         increase_strip = 0
         i = 1
@@ -88,10 +96,11 @@ def main(argv):
                 validation_error.append(1.0 - neural_network.accuracy(validation_set["input"], validation_set["target"]))
                 if (min_error is None) or (validation_error[-1] < min_error):
                     min_error = validation_error[-1]
-                    neural_network.save("./SAVE_" + k + "/Save")
+                    neural_network.save("./SAVE_" + str(k) + "/Save")
                 if len(validation_error) > 1:
-                    if (validation_error[-1] - validation_error[-2]) < 0.1:
-                        break
+                    #if (validation_error[-1] - validation_error[-2]) < 0.001:
+                    #    print("\tIncrease in validation error is too low.")
+                    #    break
                     if validation_error[-1] > validation_error[-2]:
                         increase_strip += 1
                         if increase_strip == 3:
@@ -104,7 +113,7 @@ def main(argv):
             epoch += 1
 
         #Re-establish best weight set
-        neural_network.restore("./SAVE_" + k + "/Save")
+        neural_network.restore("./SAVE_" + str(k) + "/Save")
         final_errors.append(neural_network.accuracy(validation_set["input"], validation_set["target"]))
 
         print("\tAccuracy test on validation set {0}".format(k))
