@@ -70,7 +70,7 @@ class NeuralNetwork:
         self.output = tf.nn.xw_plus_b(feature_vector, tf.nn.dropout(self.hidden_layer_weights, self.dropout_rate), self.hidden_layer_bias)
 
         ####### Training ######
-        self.optimiser = tf.train.AdadeltaOptimizer(learning_rate = 1.0)
+        self.optimiser = tf.train.AdadeltaOptimizer(learning_rate = 5.0)
         losses = tf.nn.softmax_cross_entropy_with_logits(self.output, self.training_labels)
         self.loss = tf.reduce_mean(losses)
 
@@ -91,7 +91,8 @@ class NeuralNetwork:
         self.saver = tf.train.Saver(tf.global_variables() + [self.global_step])
 
         ## Session and initialisation ##
-        self.session = tf.Session()
+        #self.session = tf.Session(config = tf.ConfigProto(device_count = {'GPU': 0})) #allow_soft_placement = True, log_device_placement = True
+        self.session = tf.Session() #allow_soft_placement = True, log_device_placement = True
         self.session.run(tf.global_variables_initializer(), {self.input_dictionnary : dictionnary})
         return
 
@@ -153,39 +154,89 @@ class NeuralNetwork:
 
     def create_kernel_maximiser(self, kernel_size, neuron_index):
 
-        maximiser_input = tf.Variable(tf.random_uniform([1, kernel_size, self.vector_dimension, 1], 0.0, 1.0), trainable = True)
+        #maximiser_input = tf.Variable(tf.truncated_normal([1, kernel_size, self.vector_dimension, 1], stddev = 1.0), trainable = True)
+        maximiser_input = tf.Variable(tf.truncated_normal([kernel_size, self.vector_dimension], stddev = 1.0), trainable = True)
         kernel = tf.slice(self.kernels[kernel_size], [0, 0, 0, neuron_index], [kernel_size, self.vector_dimension, 1, 1])
 
-        print(kernel)
-        print(tf.shape(kernel))
-
-        output = tf.nn.conv2d(maximiser_input,
+        output = tf.nn.conv2d( tf.expand_dims(tf.expand_dims(maximiser_input, 0), -1),
             kernel,
             strides = [1, 1, 1, 1],
             padding = "VALID")
-
-        return Maximiser(self.session, maximiser_input, output)
+        # Without relu layer : useless
+        return Maximiser(self.session, maximiser_input, output, self)
 
 class Maximiser:
-    def __init__(self, session, input, value_to_optimise):
+    def __init__(self, session, input, value_to_optimise, neural_network):
 
         self.session = session
         self.result = input
         self.value_to_optimise = value_to_optimise
+        self.nn = neural_network
+
+        ### Computation graph for cosine similarity ###
+        #self.cosine_similarity_operand_1 = tf.placeholder(tf.float32)
+        #self.cosine_similarity_operand_2 = tf.placeholder(tf.float32)
+        #self.cosine_similarity = tf.reduce_sum(tf.nn.l2_normalize(self.cosine_similarity_operand_1, 0) * tf.nn.l2_normalize(self.cosine_similarity_operand_2, 0))
+
+        self.tensor_slice = tf.placeholder(tf.float32, [1, 300])
+        batched_tensor_slice = tf.tile(tf.nn.l2_normalize(self.tensor_slice, 1), [self.session.run(tf.shape(self.nn.dictionnary))[0], 1])
+        normalized_lookup_table = tf.nn.l2_normalize(self.nn.dictionnary, 1)
+        self.batched_cosine_similarity = tf.reduce_sum(tf.multiply(batched_tensor_slice, normalized_lookup_table), 1)
+        self.best_cosine_similarity = tf.arg_max(self.batched_cosine_similarity, 0)
 
         ### Create optimiser ###
         self.optimiser = tf.train.GradientDescentOptimizer(1.0)
-        self.ratio = tf.div(tf.constant(1.0, tf.float32), self.value_to_optimise)
-        self.optimisation_step = self.optimiser.minimize(self.ratio)
+        #self.ratio = tf.div(tf.constant(1.0, tf.float32), self.value_to_optimise)
+        #self.optimisation_step = self.optimiser.minimize(self.ratio)
+        gradients = self.optimiser.compute_gradients(self.value_to_optimise, [self.result])
+        self.optimisation_step = self.optimiser.apply_gradients([tf.negative(gv[0]), gv[1]] for gv in gradients)
+
+        self.session.run(tf.variables_initializer([input]))
         return
 
     def run(self):
-        self.session.run(tf.variables_initializer([self.result]))
-        print(self.session.run(tf.squeeze(self.result)))
-        for i in xrange(500):
-            _, value = self.session.run([self.optimisation_step, self.ratio])
+        #print(self.session.run(self.result))
+        for i in xrange(3500):
+            _, value = self.session.run([self.optimisation_step, self.value_to_optimise])
             stdout.write("\r%f  " % value)
             stdout.flush()
         stdout.write("\n")
-        print(self.session.run(tf.squeeze(self.result)))
+        print(self.session.run(self.result))
         return
+
+    def find_maximising_sentence(self, lookup_table):
+
+        input_shape = self.session.run(tf.shape(self.result))
+        words_in_input = input_shape[0]
+        sentence = []
+
+        for i in xrange(words_in_input):
+            result_slice = self.session.run(tf.slice(self.result, [i, 0], [1, self.nn.vector_dimension]))
+
+            words_similarity, best_word_idx = self.session.run([self.batched_cosine_similarity, self.best_cosine_similarity], feed_dict = { self.tensor_slice : result_slice })
+            print(best_word_idx)
+
+            min_word = lookup_table.word_to_int.keys()[lookup_table.word_to_int.values().index(best_word_idx)] #lookup_table.lookup_int(best_word_idx) # self.session.run(tf.squeeze(embedded_chars), feed_dict = {self.input_sentence : [best_word_idx]})
+            min_diff = words_similarity[int(best_word_idx)]
+
+            #min_diff = None
+            #min_word = None
+            #for entry in lookup_table.word_to_int:
+            #    word = lookup_table.lookup(entry)
+            #    diff = self.find_difference(word, tensor_slice)
+            #    if min_diff is None or diff < min_diff:
+            #        min_diff = diff
+            #        min_word = entry
+            #        print("Found better solution : {0}".format(entry))
+            print("Done : {0} {1}".format(min_word, min_diff))
+            sentence.append({"word" : min_word, "diff" : min_diff})
+        return sentence
+
+#    def find_difference(self, a, b):
+#        return self.__cosine_similarity(a, b)
+#
+#    def __cosine_similarity(self, a, b):
+#        return self.session.run(self.cosine_similarity, feed_dict = 
+#        {
+#            self.cosine_similarity_operand_1 : a, self.cosine_similarity_operand_2 : b
+#        })

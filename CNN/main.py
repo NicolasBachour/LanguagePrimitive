@@ -6,7 +6,7 @@ from common import NeuralNetwork as nn
 from common import LookupTable as lt
 
 ### Constants ###
-EARLY_STOPPING__STRIP_LENGTH = 5
+EARLY_STOPPING__STRIP_LENGTH = 1
 CROSS_VALIDATION__FOLD = 10
 CROSS_VALIDATION__TEST_COUNT = 1
 
@@ -33,35 +33,45 @@ def main(argv):
         max_sentence_length = max(len(line) for label in data for file in data[label] for line in data[label][file])
         print("Max sentence length is {0}. Sentences will be padded to this size to make the use of batches possible.".format(max_sentence_length))
         for i, label in enumerate(data):
+            for k in xrange(CROSS_VALIDATION__FOLD):
+                integer_sentences[i].append([])
             for file in data[label]:
+                cv_set = int(file[2:5]) / 100
                 for line in data[label][file]:
-                    integer_sentences[i].append(word2vec.convertSentence(line, max_sentence_length))
+                    integer_sentences[i][cv_set].append(word2vec.convertSentence(line, max_sentence_length))
 
         # Create cv set
-        print("Creating cross-validation subset...")
-        positive_reviews = len(integer_sentences[0])
-        negative_reviews = len(integer_sentences[1])
-        cv_reviews = (positive_reviews + negative_reviews) / CROSS_VALIDATION__FOLD
+        #print("Creating cross-validation subset...")
+        #positive_reviews = len(integer_sentences[0])
+        #negative_reviews = len(integer_sentences[1])
+        #cv_reviews = (positive_reviews + negative_reviews) / CROSS_VALIDATION__FOLD
         
-        print("\tFound {0} positive and {1} negative reviews...".format(positive_reviews, negative_reviews))
-        print("\tSplitting dataset in {0} subsets of {1} reviews each...".format(CROSS_VALIDATION__FOLD, cv_reviews))
+        #print("\tFound {0} positive and {1} negative reviews...".format(positive_reviews, negative_reviews))
+        #print("\tSplitting dataset in {0} subsets of {1} reviews each...".format(CROSS_VALIDATION__FOLD, cv_reviews))
+
+        #for k in xrange(CROSS_VALIDATION__FOLD):
+        #    data_subsets.append({ "input" : [], "target" : [] })
+        #    for i in xrange(cv_reviews):
+        #        sample_class = None
+        #        if len(integer_sentences[0]) == 0:
+        #            sample_class = 1
+        #        elif len(integer_sentences[1]) == 0:
+        #            sample_class = 0
+        #        else:
+        #            sample_class = random.randint(0, len(integer_sentences) - 1)
+        #        sentence = 0
+        #        if (len(integer_sentences[sample_class]) - 1) > 0:
+        #            sentence = random.randint(0, len(integer_sentences[sample_class]) - 1)
+        #        data_subsets[k]["input"].append(integer_sentences[sample_class][sentence])
+        #        data_subsets[k]["target"].append([1.0, 0.0] if sample_class == 0 else [0.0, 1.0])
+        #        del integer_sentences[sample_class][sentence]
 
         for k in xrange(CROSS_VALIDATION__FOLD):
             data_subsets.append({ "input" : [], "target" : [] })
-            for i in xrange(cv_reviews):
-                sample_class = None
-                if len(integer_sentences[0]) == 0:
-                    sample_class = 1
-                elif len(integer_sentences[1]) == 0:
-                    sample_class = 0
-                else:
-                    sample_class = random.randint(0, len(integer_sentences) - 1)
-                sentence = 0
-                if (len(integer_sentences[sample_class]) - 1) > 0:
-                    sentence = random.randint(0, len(integer_sentences[sample_class]) - 1)
-                data_subsets[k]["input"].append(integer_sentences[sample_class][sentence])
-                data_subsets[k]["target"].append([1.0, 0.0] if sample_class == 0 else [0.0, 1.0])
-                del integer_sentences[sample_class][sentence]
+            for class_idx in xrange(2):
+                for sentence in integer_sentences[class_idx][k]:
+                    data_subsets[k]["input"].append(sentence)
+                    data_subsets[k]["target"].append([1.0, 0.0] if class_idx == 0 else [0.0, 1.0])
 
         ### Create Neural network, train it, and save it ###
         print("Creating network...")
@@ -90,7 +100,7 @@ def main(argv):
         validation_error = []
         while True:
             print("\tEpoch {0}".format(epoch + 1))
-            shuffle_paired_sets(training_set["input"], training_set["target"])
+            training_set["input"], training_set["target"] = shuffle_paired_sets(training_set["input"], training_set["target"])
             neural_network.train(training_set["input"], training_set["target"], 50)
             if (i == EARLY_STOPPING__STRIP_LENGTH):
                 validation_error.append(1.0 - neural_network.accuracy(validation_set["input"], validation_set["target"]))
@@ -126,8 +136,7 @@ def main(argv):
 def shuffle_paired_sets(a, b):
     tmp = list(zip(a, b))
     random.shuffle(tmp)
-    a, b = zip(*tmp)
-    return
+    return zip(*tmp)
 
 if __name__ == "__main__":
     main(sys.argv)

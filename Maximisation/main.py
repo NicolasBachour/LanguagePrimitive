@@ -55,6 +55,14 @@ def main(argv):
         print("Maximising neuron...")
         maximiser = neural_network.create_kernel_maximiser(3, 72)
         maximiser.run()
+        sentence = maximiser.find_maximising_sentence(word2vec)
+        print("Maximising sentence for kernel is \"{0} {1} {2}\" with {3}/{4}/{5} distance",
+            sentence[0]["word"],
+            sentence[1]["word"],
+            sentence[2]["word"],
+            sentence[0]["diff"],
+            sentence[1]["diff"],
+            sentence[2]["diff"])
 
         #maximiser = neural_network.create_kernel_maximiser(3, 72)
         #maximiser = neural_network.create_kernel_maximiser(3, 72)

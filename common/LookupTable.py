@@ -39,12 +39,15 @@ class LookupTable:
     def lookup(self, word):
         return self.lookup_table[word]
 
+    def lookup_int(self, word):
+        return self.lookup_table[word]
+
     def convertSentence(self, sentence, padded_length):
         sentence_integers = []
         for word in sentence:
             if not word in self.word_to_int:
                 self.word_to_int[word] = len(self.lookup_table)
-                self.lookup_table.append(np.random.random(self.vector_dimension))
+                self.lookup_table.append(np.random.uniform(-0.5, 0.5, self.vector_dimension)) #### DEBUG ???
             sentence_integers.append(self.word_to_int[word])
         while len(sentence_integers) < padded_length:
             sentence_integers.append(0)
