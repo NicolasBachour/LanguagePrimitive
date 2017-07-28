@@ -5,6 +5,8 @@ from common import parser
 from common import NeuralNetwork as nn
 from common import LookupTable as lt
 
+MAXIMISER_INSTANCES = 1 # Should be 9
+
 def main(argv):
     if (len(argv) < 4):
         print("Please specify the dataset, the file containing the word2vec dictionnary, and the folder containing the trained weights of the network  :")
@@ -44,29 +46,47 @@ def main(argv):
                                           dictionnary = word2vec.getLookupTable(),
                                           is_trainable = False)
 
-#        print("Restoring weights...")
-#        neural_network.restore(os.path.join(argv[3], "Save"))
+        print("Restoring weights...")
+        neural_network.restore(os.path.join(argv[3], "Save"))
 
         #-------------------------
 
         #print("Searching for neurons with highly variable activation...")
         #neuron_x, neuron_y = neural_network.search_variable_neuron()
 
-        print("Maximising neuron...")
-        maximiser = neural_network.create_kernel_maximiser(3, 72)
-        maximiser.run()
-        sentence = maximiser.find_maximising_sentence(word2vec)
-        print("Maximising sentence for kernel is \"{0} {1} {2}\" with {3}/{4}/{5} distance",
-            sentence[0]["word"],
-            sentence[1]["word"],
-            sentence[2]["word"],
-            sentence[0]["diff"],
-            sentence[1]["diff"],
-            sentence[2]["diff"])
+        #for x in xrange(5, 6):
+        #    for y in xrange(1):
+        #        print("Maximising neuron...")
+        #        maximiser = neural_network.create_kernel_maximiser(MAXIMISER_INSTANCES, 5, 0)
+        #        maximiser.run()
+        #        sentence = maximiser.find_maximising_sentence(word2vec)
+        #        print(sentence)
 
-        #maximiser = neural_network.create_kernel_maximiser(3, 72)
-        #maximiser = neural_network.create_kernel_maximiser(3, 72)
+        while True:
+            x = int(input("Kernel size : "))
+            y = int(input("Index : "))
+            print("Maximising neuron...")
+            maximiser = neural_network.create_kernel_maximiser(MAXIMISER_INSTANCES, x, y)
+            maximiser.run()
+            sentence = maximiser.find_maximising_sentence(word2vec)
+            print(sentence)
 
+
+        #print("Maximising sentence for kernel is \"{0} {1} {2}\" with {3}/{4}/{5} distance".format(
+        #    sentence[0]["bestword"],
+        #    sentence[1]["bestword"],
+        #    sentence[2]["bestword"],
+        #    sentence[0]["bestdiff"],
+        #    sentence[1]["bestdiff"],
+        #    sentence[2]["bestdiff"]))
+
+        #print("Minimising sentence for kernel is \"{0} {1} {2}\" with {3}/{4}/{5} distance".format(
+        #    sentence[0]["worstword"],
+        #    sentence[1]["worstword"],
+        #    sentence[2]["worstword"],
+        #    sentence[0]["worstdiff"],
+        #    sentence[1]["worstdiff"],
+        #    sentence[2]["worstdiff"]))
     return
 
 

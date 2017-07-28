@@ -80,7 +80,8 @@ class NeuralNetwork:
             self.kernels[3], self.kernels[4], self.kernels[5],
             self.biases[3], self.biases[4], self.biases[5],
             self.hidden_layer_weights, self.hidden_layer_bias])
-        self.capped_grads_and_vars = [(tf.clip_by_norm(gv[0], clip_norm = 3.0, axes = None), gv[1]) for gv in self.grads_and_vars] # TRUC LOUCHE
+        #self.capped_grads_and_vars = [(tf.clip_by_norm(gv[0], clip_norm = 3.0, axes = None), gv[1]) for gv in self.grads_and_vars] # TRUC LOUCHE
+        self.capped_grads_and_vars = self.grads_and_vars # TRUC LOUCHE MARCHE PAS ???
         self.optimisation_step = self.optimiser.apply_gradients(self.capped_grads_and_vars, global_step = self.global_step)
 
         ### Accuracy test ###
@@ -91,8 +92,9 @@ class NeuralNetwork:
         self.saver = tf.train.Saver(tf.global_variables() + [self.global_step])
 
         ## Session and initialisation ##
-        #self.session = tf.Session(config = tf.ConfigProto(device_count = {'GPU': 0})) #allow_soft_placement = True, log_device_placement = True
-        self.session = tf.Session() #allow_soft_placement = True, log_device_placement = True
+        config = tf.ConfigProto(allow_soft_placement = True) # log_device_placement = True  device_count = {'GPU': 0}, 
+        #config.gpu_options.allow_growth = True # May be better ??
+        self.session = tf.Session(config = config)
         self.session.run(tf.global_variables_initializer(), {self.input_dictionnary : dictionnary})
         return
 
@@ -102,7 +104,7 @@ class NeuralNetwork:
         end = batch_size
         while begin < len(training_set):
             _, loss = self.session.run([self.optimisation_step, self.loss], feed_dict = {
-                self.dropout_rate : 0.5,
+                self.dropout_rate : 0.05,
                 self.input_sentence : training_set[begin:end],
                 self.training_labels : target_labels[begin:end]
             })
@@ -114,7 +116,7 @@ class NeuralNetwork:
         stdout.write("\n")
         return
     
-    def accuracy(self, input, target, subdivision=500):
+    def accuracy(self, input, target, subdivision=1500):
         results = []
         begin = 0
         end = subdivision
@@ -152,13 +154,16 @@ class NeuralNetwork:
     ### MAXIMIZATION FUNCTIONS ###
     ##############################
 
-    def create_kernel_maximiser(self, kernel_size, neuron_index):
+    def search_variable_neuron():
 
-        #maximiser_input = tf.Variable(tf.truncated_normal([1, kernel_size, self.vector_dimension, 1], stddev = 1.0), trainable = True)
-        maximiser_input = tf.Variable(tf.truncated_normal([kernel_size, self.vector_dimension], stddev = 1.0), trainable = True)
+        return
+
+    def create_kernel_maximiser(self, trials, kernel_size, neuron_index):
+
+        maximiser_input = tf.Variable(tf.truncated_normal([trials, kernel_size, self.vector_dimension], stddev = 1.0), trainable = True)
         kernel = tf.slice(self.kernels[kernel_size], [0, 0, 0, neuron_index], [kernel_size, self.vector_dimension, 1, 1])
 
-        output = tf.nn.conv2d( tf.expand_dims(tf.expand_dims(maximiser_input, 0), -1),
+        output = tf.nn.conv2d(tf.expand_dims(maximiser_input, -1),
             kernel,
             strides = [1, 1, 1, 1],
             padding = "VALID")
@@ -173,21 +178,24 @@ class Maximiser:
         self.value_to_optimise = value_to_optimise
         self.nn = neural_network
 
-        ### Computation graph for cosine similarity ###
-        #self.cosine_similarity_operand_1 = tf.placeholder(tf.float32)
-        #self.cosine_similarity_operand_2 = tf.placeholder(tf.float32)
-        #self.cosine_similarity = tf.reduce_sum(tf.nn.l2_normalize(self.cosine_similarity_operand_1, 0) * tf.nn.l2_normalize(self.cosine_similarity_operand_2, 0))
+        ### Maximisation ###
+        self.best_result_value = None
 
+        ### Computation graph for cosine similarity ###
         self.tensor_slice = tf.placeholder(tf.float32, [1, 300])
-        batched_tensor_slice = tf.tile(tf.nn.l2_normalize(self.tensor_slice, 1), [self.session.run(tf.shape(self.nn.dictionnary))[0], 1])
-        normalized_lookup_table = tf.nn.l2_normalize(self.nn.dictionnary, 1)
-        self.batched_cosine_similarity = tf.reduce_sum(tf.multiply(batched_tensor_slice, normalized_lookup_table), 1)
-        self.best_cosine_similarity = tf.arg_max(self.batched_cosine_similarity, 0)
+        #batched_tensor_slice = tf.tile(tf.nn.l2_normalize(self.tensor_slice, 1), [self.session.run(tf.shape(self.nn.dictionnary))[0], 1])
+        #normalized_lookup_table = tf.nn.l2_normalize(self.nn.dictionnary, 1)
+
+        batched_tensor_slice = tf.tile(tf.nn.l2_normalize(self.tensor_slice, 1), [50000, 1])
+        self.normalized_lookup_table_full = tf.nn.l2_normalize(self.nn.dictionnary, 1)
+        self.normalized_lookup_table = tf.placeholder(tf.float32, shape = [None, self.nn.vector_dimension])
+
+        self.batched_cosine_similarity = tf.reduce_sum(tf.multiply(batched_tensor_slice, self.normalized_lookup_table), 1)
+        self.best_cosine_similarity = tf.nn.top_k(self.batched_cosine_similarity, k = 10)
+        self.worst_cosine_similarity = tf.nn.top_k(tf.negative(self.batched_cosine_similarity), k = 10)
 
         ### Create optimiser ###
-        self.optimiser = tf.train.GradientDescentOptimizer(1.0)
-        #self.ratio = tf.div(tf.constant(1.0, tf.float32), self.value_to_optimise)
-        #self.optimisation_step = self.optimiser.minimize(self.ratio)
+        self.optimiser = tf.train.GradientDescentOptimizer(0.001)
         gradients = self.optimiser.compute_gradients(self.value_to_optimise, [self.result])
         self.optimisation_step = self.optimiser.apply_gradients([tf.negative(gv[0]), gv[1]] for gv in gradients)
 
@@ -196,47 +204,72 @@ class Maximiser:
 
     def run(self):
         #print(self.session.run(self.result))
-        for i in xrange(3500):
-            _, value = self.session.run([self.optimisation_step, self.value_to_optimise])
-            stdout.write("\r%f  " % value)
+        values = []
+        RANGE = int(input("Number of training epochs : "))
+        for i in xrange(RANGE): # DEBUG
+            _, values = self.session.run([self.optimisation_step, self.value_to_optimise])
+            stdout.write("\r")
+            for value in values:
+                stdout.write("%f\t" % value)
             stdout.flush()
         stdout.write("\n")
-        print(self.session.run(self.result))
+
+        for i in xrange(0, len(values)):
+            if self.best_result_value is None or values[i] < values[self.best_result_value]:
+                self.best_result_value = i
+        print(self.session.run(self.result[self.best_result_value])) # DEBUG
         return
 
     def find_maximising_sentence(self, lookup_table):
 
         input_shape = self.session.run(tf.shape(self.result))
-        words_in_input = input_shape[0]
+        words_in_input = input_shape[1]
         sentence = []
 
         for i in xrange(words_in_input):
-            result_slice = self.session.run(tf.slice(self.result, [i, 0], [1, self.nn.vector_dimension]))
+            result_slice = self.session.run(tf.slice(self.result, [self.best_result_value, i, 0], [1, 1, self.nn.vector_dimension]))
 
-            words_similarity, best_word_idx = self.session.run([self.batched_cosine_similarity, self.best_cosine_similarity], feed_dict = { self.tensor_slice : result_slice })
-            print(best_word_idx)
+            normalized_lookup_table_values = self.session.run(self.normalized_lookup_table_full)
 
-            min_word = lookup_table.word_to_int.keys()[lookup_table.word_to_int.values().index(best_word_idx)] #lookup_table.lookup_int(best_word_idx) # self.session.run(tf.squeeze(embedded_chars), feed_dict = {self.input_sentence : [best_word_idx]})
-            min_diff = words_similarity[int(best_word_idx)]
+            begin = 0
+            end = 50000
+            best_words = { "values" : [], "indices" : []}
+            worst_words = { "values" : [], "indices" : []}
+            while begin < len(normalized_lookup_table_values):
+                words_similarity, part_best_words, part_worst_words = self.session.run([self.batched_cosine_similarity, self.best_cosine_similarity, self.worst_cosine_similarity], feed_dict =
+                {
+                    self.tensor_slice : result_slice[0],
+                    self.normalized_lookup_table : normalized_lookup_table_values[begin:end] if end < len(normalized_lookup_table_values) else np.concatenate([normalized_lookup_table_values[begin:end], np.zeros((50000 - len(normalized_lookup_table_values) + begin, 300))])
+                })
 
-            #min_diff = None
-            #min_word = None
-            #for entry in lookup_table.word_to_int:
-            #    word = lookup_table.lookup(entry)
-            #    diff = self.find_difference(word, tensor_slice)
-            #    if min_diff is None or diff < min_diff:
-            #        min_diff = diff
-            #        min_word = entry
-            #        print("Found better solution : {0}".format(entry))
-            print("Done : {0} {1}".format(min_word, min_diff))
-            sentence.append({"word" : min_word, "diff" : min_diff})
+                for i in xrange(len(part_best_words.indices)):
+                    part_best_words.indices[i] += begin
+                for i in xrange(len(part_worst_words.indices)):
+                    part_worst_words.indices[i] += begin
+
+                best_words["values"] += part_best_words.values.tolist()
+                best_words["indices"] += part_best_words.indices.tolist()
+                worst_words["values"] += part_worst_words.values.tolist()
+                worst_words["indices"] += part_worst_words.indices.tolist()
+
+                #if worst_similarity is None or words_similarity[part_worst_word_idx] < worst_similarity:
+                #    worst_word_idx = part_worst_word_idx + begin
+                #    worst_similarity = words_similarity[part_worst_word_idx]
+
+                begin += 50000
+                end += 50000
+            
+            best_words["values"], best_words["indices"] = zip(*(sorted(zip(best_words["values"], best_words["indices"]), key = lambda element: element[0], reverse=True)))
+            worst_words["values"], worst_words["indices"] = zip(*(sorted(zip(worst_words["values"], worst_words["indices"]), key = lambda element: element[0], reverse=True)))
+
+            sentence.append([])
+            for i in xrange(10):
+                max_word = lookup_table.word_to_int.keys()[lookup_table.word_to_int.values().index(best_words["indices"][i])]
+                max_diff = best_words["values"][i]
+
+                min_word = lookup_table.word_to_int.keys()[lookup_table.word_to_int.values().index(worst_words["indices"][i])]
+                min_diff = worst_words["values"][i]
+
+                print("{4} : {0} {1} | {2} {3}".format(max_word, max_diff, min_word, min_diff, i))
+                sentence[-1].append({"bestword" : max_word, "bestdiff" : max_diff, "worstword" : min_word, "worstdiff" : min_diff})
         return sentence
-
-#    def find_difference(self, a, b):
-#        return self.__cosine_similarity(a, b)
-#
-#    def __cosine_similarity(self, a, b):
-#        return self.session.run(self.cosine_similarity, feed_dict = 
-#        {
-#            self.cosine_similarity_operand_1 : a, self.cosine_similarity_operand_2 : b
-#        })

@@ -7,6 +7,7 @@ from common import LookupTable as lt
 
 ### Constants ###
 EARLY_STOPPING__STRIP_LENGTH = 1
+EARLY_STOPPING__INCREASES = 6
 CROSS_VALIDATION__FOLD = 10
 CROSS_VALIDATION__TEST_COUNT = 1
 
@@ -113,7 +114,7 @@ def main(argv):
                     #    break
                     if validation_error[-1] > validation_error[-2]:
                         increase_strip += 1
-                        if increase_strip == 3:
+                        if increase_strip == EARLY_STOPPING__INCREASES:
                             break
                     else:
                         increase_strip = 0
