@@ -70,23 +70,6 @@ def main(argv):
             maximiser.run()
             sentence = maximiser.find_maximising_sentence(word2vec)
             print(sentence)
-
-
-        #print("Maximising sentence for kernel is \"{0} {1} {2}\" with {3}/{4}/{5} distance".format(
-        #    sentence[0]["bestword"],
-        #    sentence[1]["bestword"],
-        #    sentence[2]["bestword"],
-        #    sentence[0]["bestdiff"],
-        #    sentence[1]["bestdiff"],
-        #    sentence[2]["bestdiff"]))
-
-        #print("Minimising sentence for kernel is \"{0} {1} {2}\" with {3}/{4}/{5} distance".format(
-        #    sentence[0]["worstword"],
-        #    sentence[1]["worstword"],
-        #    sentence[2]["worstword"],
-        #    sentence[0]["worstdiff"],
-        #    sentence[1]["worstdiff"],
-        #    sentence[2]["worstdiff"]))
     return
 
 

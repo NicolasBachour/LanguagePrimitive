@@ -160,14 +160,14 @@ class NeuralNetwork:
 
     def create_kernel_maximiser(self, trials, kernel_size, neuron_index):
 
-        maximiser_input = tf.Variable(tf.truncated_normal([trials, kernel_size, self.vector_dimension], stddev = 1.0), trainable = True)
+        maximiser_input = tf.Variable(tf.random_uniform([trials, kernel_size, self.vector_dimension], -3.0, 3.0), trainable = True)
         kernel = tf.slice(self.kernels[kernel_size], [0, 0, 0, neuron_index], [kernel_size, self.vector_dimension, 1, 1])
 
         output = tf.nn.conv2d(tf.expand_dims(maximiser_input, -1),
             kernel,
             strides = [1, 1, 1, 1],
             padding = "VALID")
-        # Without relu layer : useless
+
         return Maximiser(self.session, maximiser_input, output, self)
 
 class Maximiser:
@@ -183,9 +183,6 @@ class Maximiser:
 
         ### Computation graph for cosine similarity ###
         self.tensor_slice = tf.placeholder(tf.float32, [1, 300])
-        #batched_tensor_slice = tf.tile(tf.nn.l2_normalize(self.tensor_slice, 1), [self.session.run(tf.shape(self.nn.dictionnary))[0], 1])
-        #normalized_lookup_table = tf.nn.l2_normalize(self.nn.dictionnary, 1)
-
         batched_tensor_slice = tf.tile(tf.nn.l2_normalize(self.tensor_slice, 1), [50000, 1])
         self.normalized_lookup_table_full = tf.nn.l2_normalize(self.nn.dictionnary, 1)
         self.normalized_lookup_table = tf.placeholder(tf.float32, shape = [None, self.nn.vector_dimension])
@@ -195,29 +192,32 @@ class Maximiser:
         self.worst_cosine_similarity = tf.nn.top_k(tf.negative(self.batched_cosine_similarity), k = 10)
 
         ### Create optimiser ###
-        self.optimiser = tf.train.GradientDescentOptimizer(0.001)
+        self.optimiser = tf.train.GradientDescentOptimizer(0.01)
         gradients = self.optimiser.compute_gradients(self.value_to_optimise, [self.result])
         self.optimisation_step = self.optimiser.apply_gradients([tf.negative(gv[0]), gv[1]] for gv in gradients)
+        self.normalisation_step = tf.assign(input, tf.nn.l2_normalize(input, 1))
 
         self.session.run(tf.variables_initializer([input]))
         return
 
     def run(self):
-        #print(self.session.run(self.result))
+        print("Maximizing output")
         values = []
-        RANGE = int(input("Number of training epochs : "))
-        for i in xrange(RANGE): # DEBUG
-            _, values = self.session.run([self.optimisation_step, self.value_to_optimise])
+        last_value = self.session.run(self.value_to_optimise)
+        previous_value = None
+        while previous_value is None or abs(last_value - previous_value) > 0.000000001:
+            _, _, values = self.session.run([self.optimisation_step, self.normalisation_step, self.value_to_optimise])
             stdout.write("\r")
             for value in values:
                 stdout.write("%f\t" % value)
             stdout.flush()
+            previous_value = last_value
+            last_value = self.session.run(self.value_to_optimise)
         stdout.write("\n")
 
         for i in xrange(0, len(values)):
             if self.best_result_value is None or values[i] < values[self.best_result_value]:
                 self.best_result_value = i
-        print(self.session.run(self.result[self.best_result_value])) # DEBUG
         return
 
     def find_maximising_sentence(self, lookup_table):
