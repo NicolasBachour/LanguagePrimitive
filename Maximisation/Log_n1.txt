@@ -1,0 +1,1063 @@
+Optimum 15 #6 : tedium 0.18367049098 | Siva 0.219958215952
+Optimum 15 #7 : wine_grapes 0.182741671801 | Iams 0.218898445368
+Optimum 15 #8 : sand_wedge 0.182724282146 | aesthetically 0.213215202093
+Optimum 15 #9 : Weathers 0.18160828948 | Law_Enforcement_Division 0.21308337152
+Optimum 16 #0 : Hellenic 0.221171885729 | HIG 0.226377680898
+Optimum 16 #1 : JSR 0.217309832573 | By_DAVID_GINSBURG 0.222159266472
+Optimum 16 #2 : CD## 0.209238886833 | skin_cancers 0.214939340949
+Optimum 16 #3 : WLL 0.20468878746 | virtual_desktops 0.205426007509
+Optimum 16 #4 : Deuce_McAllister 0.201397567987 | Kenwood 0.203788816929
+Optimum 16 #5 : Jetta 0.199928417802 | Johnny_Weir 0.202998772264
+Optimum 16 #6 : unforeseen_circumstances 0.195945501328 | Duesseldorf 0.200563579798
+Optimum 16 #7 : > 0.194327458739 | multipoint 0.196891605854
+Optimum 16 #8 : Whittemore 0.192609727383 | Thabo_Mbeki 0.196512788534
+Optimum 16 #9 : Ras_Lanouf 0.192176476121 | CNNMoney.com 0.193685501814
+Optimum 17 #0 : summation 0.264822483063 | mugger 0.211800336838
+Optimum 17 #1 : villainous 0.22686509788 | By_RICARDO_ALONSO 0.210277706385
+Optimum 17 #2 : Linking 0.214639261365 | Murray_Darling_Basin 0.207213655114
+Optimum 17 #3 : gait 0.212515667081 | ##News 0.200988978148
+Optimum 17 #4 : fiddler 0.212508529425 | Stillwater_Okla. 0.199272036552
+Optimum 17 #5 : enumeration 0.206804975867 | deadpanned 0.199098840356
+Optimum 17 #6 : Ullman 0.205074697733 | Recital_Hall 0.195977568626
+Optimum 17 #7 : Timely 0.20355835557 | dopey 0.195787489414
+Optimum 17 #8 : manhood 0.199709832668 | taxiing 0.190247535706
+Optimum 17 #9 : crucible 0.199698626995 | Callan 0.189986288548
+Optimum 18 #0 : guffaws 0.220556765795 | Maw 0.240697175264
+Optimum 18 #1 : Wearsiders 0.215629547834 | polemics 0.223031163216
+Optimum 18 #2 : commingled 0.208510786295 | canoeists 0.222997605801
+Optimum 18 #3 : Izquierdo 0.198337048292 | quicksilver 0.220420315862
+Optimum 18 #4 : Draper_Fisher_Jurvetson 0.196049571037 | Nektar 0.216514378786
+Optimum 18 #5 : GMC_Sierra 0.192298918962 | Kuranyi 0.215792536736
+Optimum 18 #6 : heaviest_snowfall 0.192289978266 | Mammootty 0.215650945902
+Optimum 18 #7 : ##/#/####_#:##:##_AM 0.191800177097 | Palm_Treo 0.214336842299
+Optimum 18 #8 : Mar_del_Plata 0.189468443394 | topiary 0.212916195393
+Optimum 18 #9 : Snowmass_Village 0.188335627317 | BRP 0.211576074362
+Optimum 19 #0 : Mase 0.218435883522 | Jefferson_Pilot 0.24735969305
+Optimum 19 #1 : Mandir 0.211162760854 | Victorian_era 0.223631978035
+Optimum 19 #2 : Chris_Shays 0.207958310843 | Wade_LeBlanc 0.219552993774
+Optimum 19 #3 : Guts 0.199597194791 | inversely 0.21795681119
+Optimum 19 #4 : Orion_Township 0.198780551553 | Malan 0.216337293386
+Optimum 19 #5 : rebooted 0.198438361287 | Shahabuddin 0.215552225709
+Optimum 19 #6 : Chattahoochee_River 0.198158189654 | FICO_score 0.211824610829
+Optimum 19 #7 : ESPN3.com 0.196929857135 | Woodcreek 0.207560449839
+Optimum 19 #8 : resisters 0.195492476225 | Costco_Wholesale 0.20719730854
+Optimum 19 #9 : GUATEMALA_CITY 0.195300489664 | BiDil 0.205796122551
+Optimum 20 #0 : wicket_taker 0.239505961537 | ###MM 0.216983109713
+Optimum 20 #1 : Raghavan 0.196867316961 | Husseini 0.206556200981
+Optimum 20 #2 : Speaker_Dennis_Hastert 0.190525770187 | Duguid 0.205983445048
+Optimum 20 #3 : Partially_offsetting 0.185896486044 | McClintic 0.203839719296
+Optimum 20 #4 : Vedran_Corluka 0.177511721849 | By_HYUNG_JIN 0.202997788787
+Optimum 20 #5 : singularity 0.173852100968 | Sturtevant 0.201845943928
+Optimum 20 #6 : Elroy 0.171085119247 | Mabee 0.198378205299
+Optimum 20 #7 : ----------------------------------------_Net 0.171011328697 | Incas 0.197481274605
+Optimum 20 #8 : Animal_Welfare_Act 0.168031156063 | multimodal 0.196460112929
+Optimum 20 #9 : Malkovich 0.167124211788 | Daventry 0.196434035897
+Optimum 21 #0 : waterfronts 0.212777078152 | Microsoft_Corp_MSFT.O 0.234531402588
+Optimum 21 #1 : adulterous 0.198829382658 | CAMBRIDGE_Mass._BUSINESS_WIRE 0.233880251646
+Optimum 21 #2 : Al_Dulaimi 0.195475190878 | Toy_Industry 0.233064323664
+Optimum 21 #3 : Parkhill 0.192435592413 | Ecosystems 0.231422409415
+Optimum 21 #4 : masking_tape 0.190661787987 | essential_fatty_acids 0.219505637884
+Optimum 21 #5 : Pahl 0.189238905907 | BRISTOL_Tenn. 0.218861669302
+Optimum 21 #6 : Nicolosi 0.18787433207 | exclamation_mark 0.217015057802
+Optimum 21 #7 : Holiday_Shopping 0.187192380428 | WCBS 0.215742662549
+Optimum 21 #8 : Gigantic 0.185619488358 | Rep._Nick_Rahall 0.215550303459
+Optimum 21 #9 : Abiola 0.18399707973 | ticket_stubs 0.213819280267
+Optimum 22 #0 : NHL_Game_Summary 0.245646834373 | newswires 0.219447791576
+Optimum 22 #1 : Redistribution 0.230661869049 | wVth 0.215785518289
+Optimum 22 #2 : NMB 0.228517562151 | Injures 0.215293228626
+Optimum 22 #3 : Vow 0.226588249207 | Derderian 0.215121075511
+Optimum 22 #4 : NSFW 0.217855408788 | investiture 0.20693269372
+Optimum 22 #5 : Siberian_tiger 0.216879248619 | Joe_Manchin 0.202475011349
+Optimum 22 #6 : LVC 0.215959906578 | outwitted 0.202203169465
+Optimum 22 #7 : pickpockets 0.212822809815 | Russian_Nikolay_Davydenko 0.201988592744
+Optimum 22 #8 : UFW 0.211269378662 | SANA'A 0.201413780451
+Optimum 22 #9 : butane 0.210931420326 | Word_Excel 0.201267272234
+Optimum 23 #0 : uncontested_layup 0.258350104094 | Beckloff 0.251927822828
+Optimum 23 #1 : watermarks 0.214292168617 | Rideau_Hall 0.241153538227
+Optimum 23 #2 : Milanese 0.213624030352 | Nobutaka_Machimura 0.235509470105
+Optimum 23 #3 : Neurontin 0.211507856846 | chocolate_sauce 0.224017769098
+Optimum 23 #4 : Illicit 0.207902148366 | Kristin_Cavallari 0.221283599734
+Optimum 23 #5 : extrovert 0.203210622072 | BUS 0.220124661922
+Optimum 23 #6 : Car_Rental 0.203062057495 | Morrie 0.213457852602
+Optimum 23 #7 : Fellaini 0.202058136463 | materiality 0.205405548215
+Optimum 23 #8 : Seidl 0.201846331358 | KATV 0.204384490848
+Optimum 23 #9 : Thomas_Sowell 0.201815053821 | Dulles_Airport 0.201283454895
+Optimum 24 #0 : freakishly 0.204931378365 | Touche 0.257841408253
+Optimum 24 #1 : reexamination 0.196859300137 | contusions 0.238036364317
+Optimum 24 #2 : SANAA_Yemen 0.191807761788 | Whataburger 0.221344470978
+Optimum 24 #3 : DeGarmo 0.188509613276 | Divinity_School 0.21710819006
+Optimum 24 #4 : ARP 0.182408094406 | Ohuruogu 0.212091416121
+Optimum 24 #5 : Iranian_Revolutionary_Guard 0.181960597634 | SMR 0.210150659084
+Optimum 24 #6 : Southern_Comfort 0.178962439299 | f_*_cking 0.209694117308
+Optimum 24 #7 : TAV 0.177792340517 | Breeders_Cup_Turf 0.208801448345
+Optimum 24 #8 : lapped_traffic 0.176591590047 | FRANKFURT_Reuters 0.208468869328
+Optimum 24 #9 : ics_file 0.174198195338 | airboat 0.204311490059
+Optimum 25 #0 : Oral_History 0.204715996981 | Bradley_Wiggins 0.24545557797
+Optimum 25 #1 : cocktail_dresses 0.203599900007 | Freya 0.222352415323
+Optimum 25 #2 : IBEW 0.197905421257 | Toxic_Substances_Control 0.221845090389
+Optimum 25 #3 : Ford_Thunderbird 0.197083383799 | KATV 0.210403174162
+Optimum 25 #4 : Jerry_Maguire 0.195080071688 | Attock 0.207639932632
+Optimum 25 #5 : Cadmus 0.193890631199 | Yahoo!_Mail 0.205297991633
+Optimum 25 #6 : Gumbo 0.191850811243 | blues_guitarist 0.204974085093
+Optimum 25 #7 : Refund 0.19126701355 | LEN 0.201594173908
+Optimum 25 #8 : Tibetan_monks 0.18800547719 | Majority_Leader_Steny_Hoyer 0.201450139284
+Optimum 25 #9 : NJC 0.18248796463 | Ronen 0.200996175408
+Optimum 26 #0 : Viv_Richards 0.226049944758 | Greenport 0.209242999554
+Optimum 26 #1 : metro_Silicon_Valley 0.215280845761 | Durga 0.208657518029
+Optimum 26 #2 : Ortman 0.206397712231 | Marine_Mammal 0.208111196756
+Optimum 26 #3 : pancetta 0.202167898417 | Volkert 0.19372446835
+Optimum 26 #4 : Pavone 0.198153793812 | packager 0.191894695163
+Optimum 26 #5 : Larceny 0.197987616062 | antipsychotic 0.191698923707
+Optimum 26 #6 : Riki_Flutey 0.196059733629 | Copyright_####-####_Comtex 0.190205961466
+Optimum 26 #7 : Monster_Hunter 0.195898637176 | Motricity 0.189389973879
+Optimum 26 #8 : By_SANDY_SHORE 0.195542052388 | var 0.189224243164
+Optimum 26 #9 : Giambra 0.194158703089 | preregister 0.18893584609
+Optimum 27 #0 : SCi 0.270580261946 | wainscoting 0.2483766675
+Optimum 27 #1 : ream 0.216165527701 | curios 0.242741256952
+Optimum 27 #2 : Raeburn 0.210739761591 | definitive_documentation 0.225059479475
+Optimum 27 #3 : Conclude 0.207831889391 | Jussi_Markkanen 0.219640344381
+Optimum 27 #4 : Usain 0.205017566681 | Texas_Instruments_TXN 0.215143054724
+Optimum 27 #5 : Arauca 0.203725427389 | Aid_Squad 0.215074792504
+Optimum 27 #6 : ActionScript 0.197869986296 | Luan 0.214032560587
+Optimum 27 #7 : Fort_Sill_Okla. 0.197655186057 | rationalism 0.212351381779
+Optimum 27 #8 : Pedro_Astacio 0.189306005836 | ATMI 0.212075784802
+Optimum 27 #9 : Saddam_Baath 0.189241111279 | Paet 0.209757447243
+Optimum 28 #0 : About.com_Guide 0.262616872787 | Erzurum 0.252387821674
+Optimum 28 #1 : Co_Ltd_####.T 0.223808765411 | Kamin 0.238539010286
+Optimum 28 #2 : Michael_Katsidis 0.213969498873 | outbox 0.229244917631
+Optimum 28 #3 : SEES 0.211604759097 | ORD 0.214480668306
+Optimum 28 #4 : Backward 0.20343708992 | Richard_Leong 0.212444216013
+Optimum 28 #5 : M'sia 0.200565069914 | Save_Lives 0.210701018572
+Optimum 28 #6 : punitive_sanctions 0.200183480978 | objector 0.208940505981
+Optimum 28 #7 : Legislative_Counsel 0.198722392321 | Manorama 0.208939552307
+Optimum 28 #8 : Ortigas 0.19690528512 | vortices 0.208836376667
+Optimum 28 #9 : Berton 0.19622643292 | Leeder 0.208808645606
+Optimum 29 #0 : bioactive 0.226609110832 | Westran 0.208397224545
+Optimum 29 #1 : Reimann 0.20864328742 | Ruffles 0.199978291988
+Optimum 29 #2 : Mick_Potter 0.190976679325 | Arbaaz 0.198700010777
+Optimum 29 #3 : OCPD 0.184513568878 | Hymns 0.197872072458
+Optimum 29 #4 : NYSE_LCC 0.180977419019 | antichrist 0.195317491889
+Optimum 29 #5 : Whitstable 0.179987251759 | nephrologist 0.19525372982
+Optimum 29 #6 : uncompromisingly 0.172978490591 | turnover_differential 0.193151175976
+Optimum 29 #7 : enzymatic 0.172046273947 | sodium_hydroxide 0.1922493577
+Optimum 29 #8 : Bombs_kill 0.169106081128 | Grieb 0.191802352667
+Optimum 29 #9 : Glancy_Binkow_& 0.167386829853 | Malachy 0.189796149731
+Optimum 30 #0 : Leverton 0.210597038269 | Kary 0.240472942591
+Optimum 30 #1 : Stagnant 0.207299798727 | McKillip 0.237436443567
+Optimum 30 #2 : LOA 0.203849375248 | islet_cell 0.228570833802
+Optimum 30 #3 : Southie 0.203503519297 | unders 0.22724801302
+Optimum 30 #4 : Frozen_Food 0.201031833887 | Niall_Ferguson 0.226242616773
+Optimum 30 #5 : WIBC 0.199345141649 | strained_oblique 0.220104083419
+Optimum 30 #6 : Overrated 0.197531580925 | Gouda 0.217536851764
+Optimum 30 #7 : Computex_trade 0.196917206049 | goalkeeper_Manuel_Neuer 0.215979978442
+Optimum 30 #8 : oral_cavity 0.19124314189 | Whitewood 0.214368253946
+Optimum 30 #9 : Themis 0.190565496683 | mouse_pads 0.213558673859
+Optimum 31 #0 : Persuading 0.240691870451 | Bal_Harbour 0.20652961731
+Optimum 31 #1 : Pawn_Shop 0.235023587942 | unranked_opponents 0.203765377402
+Optimum 31 #2 : Deerfield_Township 0.223491609097 | Compendium 0.198429346085
+Optimum 31 #3 : Bo_Derek 0.215075939894 | Primus_Financial 0.198058903217
+Optimum 31 #4 : TIKRIT_Iraq 0.211277663708 | Coonelly 0.194486051798
+Optimum 31 #5 : Themba 0.209721326828 | Pohlmann 0.190674453974
+Optimum 31 #6 : TPAO 0.203450009227 | Aine 0.1893273592
+Optimum 31 #7 : Lesson_learned 0.201523095369 | Vamos 0.188178092241
+Optimum 31 #8 : endoscopes 0.201497137547 | visual_voicemail 0.188172191381
+Optimum 31 #9 : EJB 0.201039791107 | Minister_HD_Kumaraswamy 0.18774741888
+Optimum 32 #0 : Stoehr 0.24336796999 | tif_files_under 0.229683727026
+Optimum 32 #1 : Road_A1A 0.215608760715 | PONTIAC 0.218882441521
+Optimum 32 #2 : cardiac_catheterization 0.214638888836 | By_PHILLIP_RAWLS 0.216910392046
+Optimum 32 #3 : Alexandre_Picard 0.21181333065 | newsweekly 0.216343015432
+Optimum 32 #4 : Texas_Instruments_Incorporated_TI 0.20532232523 | Gottwald 0.206409826875
+Optimum 32 #5 : SWOT 0.20137411356 | Bakili_Muluzi 0.204817950726
+Optimum 32 #6 : Pete_Maravich_Assembly 0.199900478125 | TEA_Party 0.204499438405
+Optimum 32 #7 : Ranjit_Singh 0.199359595776 | deducting_underwriting_discounts 0.203635513783
+Optimum 32 #8 : Jimmy_Vasser 0.197036281228 | Datawatch 0.201865434647
+Optimum 32 #9 : Shanny 0.195700213313 | Gethin 0.200578927994
+Optimum 33 #0 : Stittsville 0.196063518524 | ORV 0.240448653698
+Optimum 33 #1 : Tongue_River 0.19014261663 | prostituting 0.222305595875
+Optimum 33 #2 : Horsham_Pa. 0.184250175953 | Andrei_Lugovoi 0.219971299171
+Optimum 33 #3 : HSB 0.184229016304 | Pragmatic 0.206410631537
+Optimum 33 #4 : scorched_earth_policy 0.178535625339 | Cobia 0.203640043736
+Optimum 33 #5 : Q3_Profit 0.178252100945 | Krick 0.203591004014
+Optimum 33 #6 : ESE 0.176286250353 | Assemblyman_Chuck_DeVore 0.202185809612
+Optimum 33 #7 : Ilam 0.176039412618 | http://newsroom.cisco.com 0.201195329428
+Optimum 33 #8 : Northern_Samar 0.17540602386 | Offensive_MVP 0.198216617107
+Optimum 33 #9 : Krongard 0.174282565713 | eye_sockets 0.197753742337
+Optimum 34 #0 : costarring 0.237089365721 | Whiddon 0.207831308246
+Optimum 34 #1 : Petty_Officer_1st 0.224438101053 | AMETEK 0.207286924124
+Optimum 34 #2 : underarm 0.216042459011 | nada 0.199690073729
+Optimum 34 #3 : Handicrafts 0.213921427727 | honorary_Doctor 0.197858855128
+Optimum 34 #4 : Juiced 0.21168500185 | Summerton 0.197783827782
+Optimum 34 #5 : Hillebrand 0.198627158999 | Hotham 0.197472244501
+Optimum 34 #6 : ##:##_Substitution 0.198162302375 | deducting_underwriting_discounts 0.195182412863
+Optimum 34 #7 : Chowdhry 0.198004648089 | Nassau_Suffolk 0.193757295609
+Optimum 34 #8 : Air_Balloon 0.197343841195 | Agamemnon 0.191836893559
+Optimum 34 #9 : Power_Steering 0.193282216787 | Sando 0.191716238856
+Optimum 35 #0 : constitutes_recommendation 0.218127191067 | Renren 0.221096485853
+Optimum 35 #1 : Mattia 0.214307650924 | Galarza 0.217119246721
+Optimum 35 #2 : boceprevir 0.204866334796 | requisites 0.207205444574
+Optimum 35 #3 : Jalgaon 0.201343104243 | Injunction 0.207136645913
+Optimum 35 #4 : weevils 0.200140535831 | interdependencies 0.204601615667
+Optimum 35 #5 : Teesdale 0.199987471104 | Blazes 0.203562855721
+Optimum 35 #6 : Keach 0.195529386401 | coach_Bernie_Bickerstaff 0.200230747461
+Optimum 35 #7 : iPhone_Apps 0.193117380142 | Farouq 0.199199393392
+Optimum 35 #8 : Geoff_Geary 0.186723470688 | quashes 0.19780395925
+Optimum 35 #9 : CSG_Systems 0.185165062547 | untiring 0.195916652679
+Optimum 36 #0 : Pariser 0.229349181056 | Nicolaides 0.23350033164
+Optimum 36 #1 : LETS 0.225227952003 | nominate_vent 0.232247114182
+Optimum 36 #2 : Lieutenants 0.216144636273 | collective_groan 0.22518274188
+Optimum 36 #3 : Mounir 0.200665712357 | Discharged 0.218750655651
+Optimum 36 #4 : Benedick 0.200247317553 | Snipe 0.214140459895
+Optimum 36 #5 : Inpex_Corp. 0.198024064302 | Limping 0.210894748569
+^CTraceback (most recent call last):
+  File "main.py", line 90, in <module>
+    main(sys.argv)
+  File "main.py", line 84, in main
+    sentence = maximiser.find_maximising_sentence(word2vec)
+  File "/home/nb425/LanguagePrimitive/Maximisation/common/NeuralNetwork.py", line 272, in find_maximising_sentence
+    min_word = lookup_table.word_to_int.keys()[lookup_table.word_to_int.values().index(worst_words["indices"][i][j])]
+KeyboardInterrupt
+nb425@tesla:~/LanguagePrimitive/Maximisation$ python main.py --cpu ../../datasets/MR/txt_sentoken/ ../../datasets/word2vec_training/word2vec-GoogleNews-vectors ../CNN/Save_Success_000/
+nb425@tesla:~/LanguagePrimitive/Maximisation$ python main.py --cpu ../../datasets/MR/txt_sentoken/ ../../datasets/word2vec_training/word2vec-GoogleNews-vectors ../CNN/Save_Success_000/
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+Loading word vectors...
+Loading dataset...
+Max sentence length is 179. Sentences will be padded to this size to make the use of batches possible.
+Storing sentences, inputs, and targets...
+Creating static network...
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties:
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:0a:00.0
+Total memory: 11.17GiB
+Free memory: 444.38MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0xf3410200
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties:
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:0b:00.0
+Total memory: 11.17GiB
+Free memory: 497.25MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0xf3413b90
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties:
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:86:00.0
+Total memory: 11.17GiB
+Free memory: 495.38MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0xf3417520
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 3 with properties:
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:87:00.0
+Total memory: 11.17GiB
+Free memory: 497.25MiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 3
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 3
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 3 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 3 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 3
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N N
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N N
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y Y
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 3:   N N Y Y
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:0a:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K80, pci bus id: 0000:0b:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K80, pci bus id: 0000:86:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:3) -> (device: 3, name: Tesla K80, pci bus id: 0000:87:00.0)
+Restoring weights...
+Kernel size : 5
+Index : 0
+Maximising neuron...
+Maximizing output
+28.724825       39.358757       38.864197       39.567970       37.959850       36.231720       38.066570       39.162498       39.391804
+549
+Optimum 0 #0 : elites 0.19631627202 | Emirates 0.243537008762
+Optimum 0 #1 : Schaffer 0.182729631662 | overwhelming_majority 0.243119850755
+Optimum 0 #2 : repeated_requests 0.181291550398 | skyline 0.232281818986
+Optimum 1 #0 : saw 0.185931265354 | daddy 0.27895128727
+Optimum 1 #1 : scope 0.182336747646 | Root 0.258215129375
+Optimum 1 #2 : Wayne_Rooney 0.169561013579 | consciously 0.250588327646
+Optimum 2 #0 : bottles 0.19637387991 | Strait 0.271118342876
+Optimum 2 #1 : Chase 0.187682598829 | rights 0.258000910282
+Optimum 2 #2 : O'Donnell 0.18480026722 | Annapolis 0.247442528605
+Optimum 3 #0 : Donate 0.22121335566 | regaining 0.218756467104
+Optimum 3 #1 : brothers 0.200585156679 | Halton 0.216150820255
+Optimum 3 #2 : tone 0.196212336421 | Canadiens 0.213345646858
+Optimum 4 #0 : defines 0.228976935148 | Law_Enforcement 0.202285662293
+Optimum 4 #1 : shrill 0.221228450537 | Stephan 0.198562294245
+Optimum 4 #2 : compulsion 0.214643582702 | Schwab 0.196546256542
+Optimum 5 #0 : illegal_immigrant 0.233719795942 | Percy 0.241186350584
+Optimum 5 #1 : plurality 0.231625795364 | Cream 0.22259798646
+Optimum 5 #2 : bewildered 0.222943052649 | Macy 0.216194331646
+Optimum 6 #0 : Answers 0.253243863583 | Piedmont 0.221300601959
+Optimum 6 #1 : illegal_immigrant 0.233510583639 | satisfied 0.210336461663
+Optimum 6 #2 : Dudley 0.229266658425 | profit_margins 0.208311975002
+Optimum 7 #0 : Kumble 0.182103633881 | Swindon 0.259056597948
+Optimum 7 #1 : Rihanna 0.181126922369 | vein 0.243651241064
+Optimum 7 #2 : Eng 0.176336050034 | shale 0.242353618145
+Optimum 8 #0 : coach_Brad_Childress 0.198268994689 | accumulated 0.248732119799
+Optimum 8 #1 : ng 0.194958567619 | arrival 0.237364292145
+Optimum 8 #2 : S## 0.191107690334 | extremists 0.237043201923
+Optimum 9 #0 : No_Doubt 0.203466594219 | Determining 0.259467661381
+Optimum 9 #1 : jet_ski 0.199947983027 | McConville 0.246981263161
+Optimum 9 #2 : Wadena 0.192759782076 | darken 0.24488556385
+Optimum 10 #0 : Reservists 0.169400393963 | aphids 0.258499026299
+Optimum 10 #1 : Ferraris 0.167032331228 | Schoenborn 0.256773293018
+Optimum 10 #2 : Cabo 0.166497021914 | Pare 0.249793365598
+Optimum 11 #0 : Programmes 0.200098395348 | Haji 0.29626506567
+Optimum 11 #1 : sprouts 0.189975947142 | Orphans 0.260562211275
+Optimum 11 #2 : Wandering 0.187796920538 | Overcome 0.251268208027
+Optimum 12 #0 : flower_beds 0.224149942398 | mishmash 0.220651507378
+Optimum 12 #1 : hysterics 0.218632549047 | PBM 0.212011933327
+Optimum 12 #2 : orderly_manner 0.215923383832 | Rebounds 0.209240153432
+Optimum 13 #0 : Winding 0.251971364021 | commited 0.217612802982
+Optimum 13 #1 : Teves 0.24503043294 | irrevocably 0.216733112931
+Optimum 13 #2 : Relieved 0.238206505775 | Lambeau 0.203535437584
+Optimum 14 #0 : Reservists 0.239977568388 | organics 0.224872797728
+Optimum 14 #1 : DANIEL 0.237084552646 | BEL 0.219065263867
+Optimum 14 #2 : Terrill 0.223318308592 | euthanize 0.198564380407
+Optimum 15 #0 : Tila_Tequila 0.243030130863 | mkt 0.235406219959
+Optimum 15 #1 : Barriers 0.237740024924 | Loughborough 0.231494262815
+Optimum 15 #2 : ill_timed 0.22912658751 | friggin 0.222512081265
+Optimum 16 #0 : P#.#_billion 0.182803109288 | Daron 0.247776210308
+Optimum 16 #1 : Weights 0.178373157978 | bunting 0.245544046164
+Optimum 16 #2 : Edward_Cullen 0.173901617527 | Asterisk 0.244289681315
+Optimum 17 #0 : IWU 0.196622848511 | Evgeni_Nabokov 0.251798987389
+Optimum 17 #1 : SBC_Communications_Inc. 0.186453148723 | PM_Newscast_every 0.247740954161
+Optimum 17 #2 : Lech_Kaczynski 0.182710438967 | clippers 0.239204853773
+Optimum 18 #0 : pine_needles 0.218819841743 | Knocke 0.214639052749
+Optimum 18 #1 : superbike 0.203828588128 | Crabs 0.212360173464
+Optimum 18 #2 : minor_infractions 0.195242464542 | ®_Xeon 0.212126672268
+Optimum 19 #0 : Wichita_Falls_TX 0.173559725285 | griddle 0.266811788082
+Optimum 19 #1 : TORRANCE_Calif. 0.167108774185 | ###,###,###_aggregate 0.258357584476
+Optimum 19 #2 : handkerchiefs 0.161156743765 | Wendi 0.24793830514
+Optimum 20 #0 : Darshan 0.213682428002 | Seven_Seas 0.268226265907
+Optimum 20 #1 : unimproved 0.211941629648 | stickier 0.230574011803
+Optimum 20 #2 : odder 0.186558514833 | washer_dryer 0.230245918036
+Optimum 21 #0 : Raghavan 0.236711084843 | Scripps_Networks_Interactive 0.219823911786
+Optimum 21 #1 : DeShawn_Sims 0.210164994001 | marijuana_cultivation 0.219101518393
+Optimum 21 #2 : Bilbray 0.204037636518 | influencer 0.217654660344
+Optimum 22 #0 : Mase 0.235132128 | NTB 0.227595970035
+Optimum 22 #1 : repair_torn_labrum 0.234031647444 | Harpers_Ferry 0.223607435822
+Optimum 22 #2 : Deshawn 0.227169543505 | Joannie_Rochette 0.22295665741
+Optimum 23 #0 : Noor_Khan 0.220623224974 | PHNOM_PENH_Cambodia 0.228767424822
+Optimum 23 #1 : Grider 0.216842472553 | Confront 0.211917981505
+Optimum 23 #2 : Warwick_RI 0.212817817926 | Cell_Genesys 0.207464441657
+Optimum 24 #0 : Ivoire 0.254933893681 | Alex_Solis 0.238752067089
+Optimum 24 #1 : CR_Z 0.237964123487 | Companions 0.2179056108
+Optimum 24 #2 : Showtimes 0.237307921052 | Ecosystems 0.214579477906
+Optimum 25 #0 : unimproved 0.206053406 | psychoanalysis 0.265363425016
+Optimum 25 #1 : plantain 0.197098612785 | Maile 0.261774897575
+Optimum 25 #2 : Topsail 0.194816663861 | bachelor_pad 0.249250605702
+Optimum 26 #0 : teaspoon_salt 0.214756906033 | Catalans_Dragons 0.262597322464
+Optimum 26 #1 : Tibetan_monks 0.195123970509 | Sonangol 0.249150022864
+Optimum 26 #2 : Darshan 0.19230632484 | reeking 0.233018785715
+Optimum 27 #0 : Clams 0.202614188194 | Cultural_Diversity 0.220977932215
+Optimum 27 #1 : HASTINGS 0.193992286921 | bamboo_sticks 0.214353010058
+Optimum 27 #2 : Joffrey_Ballet 0.191790223122 | Kirt 0.210293933749
+Optimum 28 #0 : BANGKOK_Dow_Jones 0.205544486642 | Withey 0.251103401184
+Optimum 28 #1 : Aaron_McKie 0.192952170968 | Dalley 0.245262980461
+Optimum 28 #2 : Johnny_Isakson 0.188820689917 | Potton 0.238889545202
+Optimum 29 #0 : Hungarian_GP 0.201479926705 | biorefineries 0.255531042814
+Optimum 29 #1 : Aaron_McKie 0.199984237552 | Dorrans 0.243876069784
+Optimum 29 #2 : detractor 0.195176228881 | LIES 0.235565841198
+Optimum 30 #0 : Paperless 0.229249864817 | Trenches 0.221709787846
+Optimum 30 #1 : Alternative_Fuel 0.213645294309 | VAD 0.22077216208
+Optimum 30 #2 : Singapore_Temasek_Holdings 0.210542798042 | Oberhausen 0.219933435321
+Optimum 31 #0 : Alamos 0.243769407272 | unsourced 0.243410915136
+Optimum 31 #1 : Rankins 0.237064093351 | IN_EFFECT_UNTIL 0.238070353866
+Optimum 31 #2 : MANCHESTER_CITY 0.231196910143 | seducer 0.235122621059
+Optimum 32 #0 : SKI 0.240605980158 | Meriden_Conn. 0.225911468267
+Optimum 32 #1 : frolics 0.234302222729 | Snowy_River 0.220378190279
+Optimum 32 #2 : constitutes_recommendation 0.233695983887 | die_prematurely 0.210863023996
+Optimum 33 #0 : reappointing 0.25242036581 | Quirino 0.21898534894
+Optimum 33 #1 : Chelmsford_Mass. 0.247195452452 | Breaststroke 0.216755121946
+Optimum 33 #2 : geometrically 0.24614277482 | Tom_Donilon 0.208454012871
+Optimum 34 #0 : Nampa_Idaho 0.206770002842 | Fraker 0.274136483669
+Optimum 34 #1 : Fountainhead 0.188538879156 | Faughey 0.246139317751
+Optimum 34 #2 : About.com_Guide 0.181354403496 | mutual_distrust 0.237114265561
+Optimum 35 #0 : Major_Crimes_Unit 0.19939263165 | Triana 0.250066578388
+Optimum 35 #1 : Prioritize 0.198906138539 | rubbishes 0.244941562414
+Optimum 35 #2 : short_termism 0.184275999665 | Kisner 0.243437081575
+Optimum 36 #0 : Misunderstanding 0.20606008172 | episcopate 0.242316812277
+Optimum 36 #1 : Cusumano 0.184221297503 | snuggly 0.227183699608
+Optimum 36 #2 : COL_'## 0.182318851352 | Lhotse 0.221010640264
+Optimum 37 #0 : #/#-# 0.186364561319 | Bismark 0.251237750053
+Optimum 37 #1 : Sen._Phil_Gramm 0.167242318392 | turnround 0.243496805429
+Optimum 37 #2 : OEF 0.164513662457 | By_LOU_KESTEN 0.242861062288
+^CTraceback (most recent call last):
+  File "main.py", line 90, in <module>
+    main(sys.argv)
+  File "main.py", line 84, in main
+    sentence = maximiser.find_maximising_sentence(word2vec)
+  File "/home/nb425/LanguagePrimitive/Maximisation/common/NeuralNetwork.py", line 266, in find_maximising_sentence
+    max_word = lookup_table.word_to_int.keys()[lookup_table.word_to_int.values().index(best_words["indices"][i][j])]
+KeyboardInterrupt
+nb425@tesla:~/LanguagePrimitive/Maximisation$ python main.py --cpu ../../datasets/MR/txt_sentoken/ ../../datasets/word2vec_training/word2vec-GoogleNews-vectors ../CNN/Save_Success_000/
+nb425@tesla:~/LanguagePrimitive/Maximisation$ python main.py --cpu ../../datasets/MR/txt_sentoken/ ../../datasets/word2vec_training/word2vec-GoogleNews-vectors ../CNN/Save_Success_000/
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+Loading word vectors...
+Loading dataset...
+Max sentence length is 179. Sentences will be padded to this size to make the use of batches possible.
+Storing sentences, inputs, and targets...
+Creating static network...
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties:
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:0a:00.0
+Total memory: 11.17GiB
+Free memory: 444.38MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0xf2192000
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties:
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:0b:00.0
+Total memory: 11.17GiB
+Free memory: 497.25MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0xf2195990
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties:
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:86:00.0
+Total memory: 11.17GiB
+Free memory: 495.38MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0xf2199320
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 3 with properties:
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:87:00.0
+Total memory: 11.17GiB
+Free memory: 497.25MiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 3
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 3
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 3 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 3 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 3
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N N
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N N
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y Y
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 3:   N N Y Y
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:0a:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K80, pci bus id: 0000:0b:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K80, pci bus id: 0000:86:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:3) -> (device: 3, name: Tesla K80, pci bus id: 0000:87:00.0)
+Restoring weights...
+Kernel size : 5
+Index : 0
+Maximising neuron...
+Maximizing output
+7.89226661      17.891493       17.751350       17.561092       19.085312       16.652214       16.818670       17.004164       16.868076
+61
+Optimum 0 #0 : Quick 0.244490414858 | drawings 0.251468420029
+Optimum 0 #1 : substance 0.23064571619 | Probe 0.247792840004
+Optimum 0 #2 : representation 0.230633765459 | degrees_Celsius 0.244175389409
+Optimum 1 #0 : UMaine 0.244161963463 | HPU 0.256140053272
+Optimum 1 #1 : plumb 0.24249149859 | Pretax 0.254195421934
+Optimum 1 #2 : Tallahassee_Fla. 0.242414981127 | THR 0.249052971601
+Optimum 2 #0 : CFB 0.258615016937 | including_##months 0.274898141623
+Optimum 2 #1 : flaggers 0.256248682737 | organza 0.260733664036
+Optimum 2 #2 : cleft_palate 0.2537753582 | Kamiak 0.255345106125
+Optimum 3 #0 : REALTORS 0.258620887995 | Bartolome 0.258766263723
+Optimum 3 #1 : Veronicas 0.244353696704 | islet_cell 0.255391687155
+Optimum 3 #2 : Offensive_linemen 0.243844166398 | lactate 0.253590703011
+Optimum 4 #0 : NCAER 0.23669475317 | Kennewick_Wash. 0.267614364624
+Optimum 4 #1 : Super_Cobra 0.23477357626 | grouting 0.267577826977
+Optimum 4 #2 : Grand_Sumo_Tournament 0.233456104994 | Bobby_Bright 0.258444726467
+Optimum 5 #0 : Officer_Fritz_Henderson 0.276173293591 | Young_Offenders 0.290144175291
+Optimum 5 #1 : Richard_Chaplow 0.27419129014 | By_SUTIN_WANNABOVORN 0.266687065363
+Optimum 5 #2 : Region_VIII 0.251902461052 | Ludmilla 0.255270570517
+Optimum 6 #0 : Zierden 0.257619440556 | SWEDISH 0.269611030817
+Optimum 6 #1 : Chris_Matyszczyk 0.247554063797 | ====================_Diluted 0.268120884895
+Optimum 6 #2 : ICP_AES 0.246957749128 | synesthesia 0.256660491228
+Optimum 7 #0 : AMRAAM 0.242013081908 | Hamzah_Haz 0.267153441906
+Optimum 7 #1 : plughole 0.231267556548 | JEWELRY 0.266263127327
+Optimum 7 #2 : Amanda_Coetzer 0.230887785554 | SF_Gate 0.265884369612
+Optimum 8 #0 : MidCap_Indices 0.270051449537 | Original_Trilogy 0.263839662075
+Optimum 8 #1 : Prosecutor_Kym_Worthy 0.255336731672 | Elango 0.252202510834
+Optimum 8 #2 : bench_warmers 0.237319648266 | Rectangular 0.250993698835
+Optimum 9 #0 : Exploited_Children_Caucus 0.243127316236 | Euronext_Paris_ISIN 0.260086894035
+Optimum 9 #1 : Khazars 0.229580447078 | frostier 0.256278276443
+Optimum 9 #2 : Gairdner 0.229524284601 | Wendla 0.24828889966
+Optimum 10 #0 : Ben_Forta 0.272356569767 | Madkins 0.265646696091
+Optimum 10 #1 : Lambertus 0.230288341641 | Wimmera_Mallee 0.262850433588
+Optimum 10 #2 : CLOUT 0.224182724953 | LASCO 0.259890586138
+Optimum 11 #0 : Semmelhack 0.255441784859 | squawk_box 0.266058951616
+Optimum 11 #1 : RAF_Coltishall 0.252738714218 | Cookston 0.263512521982
+Optimum 11 #2 : Demilitarization 0.24501055479 | Ramesh_Sharma 0.257399231195
+Optimum 12 #0 : Hissey 0.284916996956 | Fariss 0.261051267385
+Optimum 12 #1 : Porthus 0.273057818413 | writer_Elaine_Kurtenbach 0.259027212858
+Optimum 12 #2 : ========================_Earnings 0.255740046501 | Victor_Matfield_Bakkies_Botha 0.258865952492
+Optimum 13 #0 : Richard_Saslaw 0.267687529325 | Lianne_Sanderson 0.274356544018
+Optimum 13 #1 : Dudick 0.245836719871 | bakes_bread 0.272471159697
+Optimum 13 #2 : Plasticizers 0.236418396235 | &_pound### 0.271373987198
+Optimum 14 #0 : scan_barcode 0.278432697058 | CARLOW 0.270749926567
+Optimum 14 #1 : WARSAW_Dec 0.254045128822 | Sreemathi 0.27047419548
+Optimum 14 #2 : Tonight_Franz_Ferdinand 0.251178115606 | Hesper 0.26877912879
+Optimum 15 #0 : SAANICH 0.248099595308 | partner_Alec_Mazo 0.262346088886
+Optimum 15 #1 : Talaq 0.236939802766 | flashing_strobe_lights 0.253553986549
+Optimum 15 #2 : Assault_Squadron 0.236318767071 | Oitzinger 0.251336276531
+Optimum 16 #0 : Total_Knee_Replacement 0.266997396946 | hydroxyethyl_starch 0.262073218822
+Optimum 16 #1 : Mackenzie_Foy 0.265829384327 | Mahesh_Rawat 0.258166134357
+Optimum 16 #2 : Markets_Tumble 0.262584805489 | upconverts 0.257696390152
+Optimum 17 #0 : violin_sonata 0.251508414745 | Effortel 0.263124346733
+Optimum 17 #1 : hickory_smoke 0.242718994617 | nanocarriers 0.262613892555
+Optimum 17 #2 : Blinderman 0.239924639463 | reinsurance_ceded 0.256036609411
+Optimum 18 #0 : Angeion_Corporation 0.237746477127 | Galkowski 0.287264585495
+Optimum 18 #1 : Njaba 0.236419022083 | Jeopardy_Productions 0.264625459909
+Optimum 18 #2 : powerpc_di_#.#.##_##.##_powerpc.udeb_Size/MD5 0.234867602587 | Sponsor_WomenVenture 0.262488871813
+Optimum 19 #0 : Rep._Ann_Lenczewski 0.262141346931 | Pressure_Builds 0.271419733763
+Optimum 19 #1 : Dr._Alan_Hilfer 0.248991042376 | KOR_fx 0.264565885067
+Optimum 19 #2 : Suja_Lowenthal 0.245965152979 | Kiepe 0.255548804998
+Optimum 20 #0 : LK_Advani_Murli_Manohar 0.272040128708 | Glen_Spey 0.283137619495
+Optimum 20 #1 : Laners 0.252592891455 | Congressman_Ed_Perlmutter 0.273528844118
+Optimum 20 #2 : LAKERS_NOTEBOOK 0.245973676443 | Duffney 0.271728992462
+Optimum 21 #0 : Wonga_Park 0.295941144228 | parkinson 0.254965782166
+Optimum 21 #1 : Qatar_Telecom_QSC 0.267486810684 | Libranet 0.254709005356
+Optimum 21 #2 : Nyssen 0.257115662098 | Adario 0.246466100216
+Optimum 22 #0 : Route_9P 0.255391418934 | Michael_Fonstein_Ph.D. 0.266836166382
+Optimum 22 #1 : Artemiev 0.249924197793 | County_Commissioners_BOCC 0.262484997511
+Optimum 22 #2 : foodie_heaven 0.243238449097 | overtest 0.256347417831
+Optimum 23 #0 : ISM_Non_Mfg 0.248912796378 | Classey 0.254940509796
+Optimum 23 #1 : Danninger 0.24103218317 | Laura_Kueny 0.254829674959
+Optimum 23 #2 : Predetermined 0.235148191452 | serological_tests 0.253330290318
+Optimum 24 #0 : anoth 0.274929493666 | skimpy_bathing_suit 0.283989608288
+Optimum 24 #1 : Remondini 0.255037426949 | HK_Lohia 0.273690640926
+Optimum 24 #2 : McLane_Foodservice 0.248243063688 | rlahue@appealdemocrat.com 0.262553662062
+Optimum 25 #0 : Athira 0.251708090305 | STSHC 0.314240962267
+Optimum 25 #1 : Arunas_A. 0.243178516626 | Stateliner 0.285049915314
+Optimum 25 #2 : Proto_Thema_newspaper 0.236803099513 | grisliness 0.268790960312
+Optimum 26 #0 : desalinating_sea_water 0.247416943312 | Superlambananas 0.277940124273
+Optimum 26 #1 : Kanex 0.246813446283 | SteelTrace 0.265866667032
+Optimum 26 #2 : Altitude_Organic 0.242878943682 | Michele_Cercone_spokesman 0.26394867897
+Optimum 27 #0 : INC._BALANCE_SHEETS 0.270281165838 | STTI 0.292465090752
+Optimum 27 #1 : Memphis_Tenn._Morgan_Keegan 0.252611398697 | ethnically_culturally 0.256740570068
+Optimum 27 #2 : Siemens_Aktiengesellschaft_NYSE 0.245057031512 | Faircourt 0.249209046364
+Optimum 28 #0 : terracotta_colored 0.242121398449 | Kamberi 0.27755060792
+Optimum 28 #1 : spokeswoman_Sarah_Bulgatz 0.241376027465 | heterogeneous_multicore 0.258144557476
+Optimum 28 #2 : http://www.cbot.com 0.239416092634 | Salive 0.257490545511
+Optimum 29 #0 : Prerunner_truck 0.281933546066 | Sugar_Coated 0.280265390873
+Optimum 29 #1 : Stephen_Kurkjian 0.261508524418 | Bansilal 0.269691973925
+Optimum 29 #2 : Wojciech_Zurawski 0.255433291197 | Orfinger 0.262165427208
+Optimum 30 #0 : FDIS 0.247942447662 | daughter_Malia_allergies 0.300416827202
+Optimum 30 #1 : wearing_woolly_hat 0.243632316589 | SOUTHERN_MAINE 0.258341223001
+Optimum 30 #2 : Defenseman_Jay_Bouwmeester 0.242462217808 | Michelle_Wie_tees 0.257204115391
+Optimum 31 #0 : megaclubs 0.259775072336 | Ferronato 0.288165181875
+Optimum 31 #1 : vpoljak@bloomberg.net 0.253340989351 | Niu_FM 0.253714323044
+Optimum 31 #2 : Yinsen 0.246096819639 | statesman_Lee_Kuan 0.252275079489
+^CTraceback (most recent call last):
+  File "main.py", line 90, in <module>
+    main(sys.argv)
+  File "main.py", line 84, in main
+    sentence = maximiser.find_maximising_sentence(word2vec)
+  File "/home/nb425/LanguagePrimitive/Maximisation/common/NeuralNetwork.py", line 274, in find_maximising_sentence
+    min_word = lookup_table.word_to_int.keys()[lookup_table.word_to_int.values().index(worst_words["indices"][i][j])]
+KeyboardInterrupt
+nb425@tesla:~/LanguagePrimitive/Maximisation$ python main.py --cpu ../../datasets/MR/txt_sentoken/ ../../datasets/word2vec_training/word2vec-GoogleNews-vectors ../CNN/Save_Success_000/
+nb425@tesla:~/LanguagePrimitive/Maximisation$ python main.py --cpu ../../datasets/MR/txt_sentoken/ ../../datasets/word2vec_training/word2vec-GoogleNews-vectors ../CNN/Save_Success_000/
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+Loading word vectors...
+Loading dataset...
+Max sentence length is 179. Sentences will be padded to this size to make the use of batches possible.
+Storing sentences, inputs, and targets...
+Creating static network...
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties:
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:0a:00.0
+Total memory: 11.17GiB
+Free memory: 444.38MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0xf2963ba0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties:
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:0b:00.0
+Total memory: 11.17GiB
+Free memory: 497.25MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0xf2967530
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties:
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:86:00.0
+Total memory: 11.17GiB
+Free memory: 495.38MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0xf296aec0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 3 with properties:
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:87:00.0
+Total memory: 11.17GiB
+Free memory: 497.25MiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 3
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 3
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 3 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 3 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 3
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N N
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N N
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y Y
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 3:   N N Y Y
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:0a:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K80, pci bus id: 0000:0b:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K80, pci bus id: 0000:86:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:3) -> (device: 3, name: Tesla K80, pci bus id: 0000:87:00.0)
+Restoring weights...
+Kernel size : 5
+Index : 0
+Maximising neuron...
+Maximizing output
+8.166537        12.532717       10.964832       9.9898067       14.013288       10.028799       12.090609       11.473404       12.506694
+61
+Optimum 0 #0 : subtract 0.253328591585 | reload 0.268297761679
+Optimum 0 #1 : Soriano 0.237598001957 | equating 0.254295617342
+Optimum 0 #2 : swerved 0.235949784517 | ambassadors 0.250013828278
+Optimum 1 #0 : bullet_casings 0.274186849594 | Ask_Jeeves 0.261014223099
+Optimum 1 #1 : audiobook 0.240921795368 | McReynolds 0.25015437603
+Optimum 1 #2 : Chouinard 0.240570738912 | clarifications_contact 0.247522458434
+Optimum 2 #0 : Ruchika 0.249409765005 | chris 0.247738718987
+Optimum 2 #1 : postulates 0.247489064932 | IN_SHARES_OF 0.246165513992
+Optimum 2 #2 : repair_torn_ligament 0.243146046996 | Jim_Heintz 0.239173799753
+Optimum 3 #0 : ID_Biomedical 0.2855681777 | hemorrhages 0.247027277946
+Optimum 3 #1 : Danka 0.28438732028 | Hours_Mystery 0.244447588921
+Optimum 3 #2 : Joel_Quenneville 0.25038048625 | VEHICLE 0.244259476662
+Optimum 4 #0 : Graham_Rix 0.281788557768 | SUBSCRIBE 0.270496934652
+Optimum 4 #1 : Rio_Tinto_RTP 0.274419248104 | SPN 0.253176987171
+Optimum 4 #2 : Batton 0.257331520319 | TelePrompTer 0.245218247175
+Optimum 5 #0 : mestizo 0.272775292397 | Religare_Enterprises 0.271701812744
+Optimum 5 #1 : gondola_ride 0.264166086912 | atomic_absorption_finish 0.258494079113
+Optimum 5 #2 : clotted_cream 0.2641043365 | DeLisi 0.245671778917
+Optimum 6 #0 : Vanderlaan 0.264771938324 | unsubscribed 0.246281951666
+Optimum 6 #1 : Tasikmalaya 0.254598736763 | COSE 0.243068888783
+Optimum 6 #2 : Inka 0.248768493533 | Sherine 0.23502600193
+Optimum 7 #0 : Arkady_Dvorkovich 0.260639041662 | Jean_Halloran 0.258872240782
+Optimum 7 #1 : outfielder_Kenny_Lofton 0.260015010834 | overrating 0.255822837353
+Optimum 7 #2 : MEBA 0.250516235828 | Leo_Motors 0.241957232356
+Optimum 8 #0 : Robuchon 0.289649903774 | Sharan_Burrow 0.250763356686
+Optimum 8 #1 : Acha 0.269979953766 | Cropping 0.250052273273
+Optimum 8 #2 : Kasser 0.261505097151 | Risby 0.245930582285
+Optimum 9 #0 : Oji_Paper 0.26812684536 | Ironbark 0.26009735465
+Optimum 9 #1 : Haldwani 0.26442861557 | IQALUIT 0.258700400591
+Optimum 9 #2 : INTEGRATION 0.263989925385 | Leithauser 0.253458023071
+Optimum 10 #0 : Murdocca 0.269163250923 | Totality 0.25082886219
+Optimum 10 #1 : #.##tn 0.256668806076 | Dwayne_Mattis 0.249812066555
+Optimum 10 #2 : crackhouse 0.248580574989 | GTH 0.24067479372
+Optimum 11 #0 : van_Gelder 0.306663542986 | Gretchen_Becker 0.256233870983
+Optimum 11 #1 : spokesman_Wayne_Ranick 0.289663910866 | Lopinto 0.255838185549
+Optimum 11 #2 : Chaldean_Catholic_Church 0.264914393425 | 2hrs_##mins 0.253723531961
+Optimum 12 #0 : Imperfects 0.268901258707 | Paypoint 0.28816229105
+Optimum 12 #1 : de_la_Isla 0.258994579315 | Collard_Greens 0.261745780706
+Optimum 12 #2 : Tollette 0.256286323071 | gonzo_journalist_Hunter 0.253746271133
+Optimum 13 #0 : Tomi_Rae_Brown 0.291818469763 | Claudiu 0.259179234505
+Optimum 13 #1 : jugular_veins 0.256973445415 | facialist 0.248790025711
+Optimum 13 #2 : DIONNE 0.254886686802 | Silk_Smitha 0.246929198503
+Optimum 14 #0 : Pedro_Duque 0.259540110826 | Inflicting 0.284907221794
+Optimum 14 #1 : Combinatorial 0.257225960493 | Richings 0.248442411423
+Optimum 14 #2 : red_robed_monks 0.25190359354 | For_Topical_Studies 0.246366560459
+Optimum 15 #0 : By_Ed_McGranahan 0.288057178259 | Dr._Felix_Umansky 0.257945567369
+Optimum 15 #1 : Bemus 0.269455254078 | Oreo_cookies_Nabisco_crackers 0.247639656067
+Optimum 15 #2 : Heartache_Tonight 0.247112125158 | white_marble_mausoleum 0.245456129313
+Optimum 16 #0 : Warnimont 0.259069144726 | nodded_politely 0.256577193737
+Optimum 16 #1 : Borisenok 0.249335512519 | Ferrellgas_LP 0.244835913181
+Optimum 16 #2 : Comforters 0.248113662004 | Apgar_scores 0.232903152704
+Optimum 17 #0 : Ilse_Aigner 0.264843404293 | Attunity_Stream 0.257199972868
+Optimum 17 #1 : Aboussie 0.258464574814 | EvoraPlus 0.253294408321
+Optimum 17 #2 : Michal_Tabara 0.25313860178 | AFGP 0.243599250913
+Optimum 18 #0 : www.amsc.com 0.255999445915 | Kenith 0.258944779634
+Optimum 18 #1 : With_APSolute_TM 0.24568991363 | twinkle_eyed 0.243284910917
+Optimum 18 #2 : DSRSG 0.242411762476 | Saleem_Bey 0.238350391388
+Optimum 19 #0 : Airedalettes 0.268268585205 | Ram_mandir 0.240995824337
+Optimum 19 #1 : Modified_Feature 0.262968629599 | dalal 0.239692538977
+Optimum 19 #2 : overeater 0.25951230526 | Lee_McFarling 0.239384770393
+Optimum 20 #0 : GOING_BACK_TO 0.271076470613 | fifty_somethings 0.256829917431
+Optimum 20 #1 : antioxidant_vitamins_C 0.262410640717 | Fortunate_Ahimbisibwe 0.236593678594
+Optimum 20 #2 : NM###### 0.245544299483 | palmoil 0.236514851451
+Optimum 21 #0 : dismembered_limbs 0.25986161828 | EMALEMAL 0.263848990202
+Optimum 21 #1 : oil_equivalent_MMBoe 0.256671756506 | HighWire_Press 0.246386826038
+Optimum 21 #2 : Product_Reliability 0.254749894142 | ELENA_L._ABEN 0.242733001709
+Optimum 22 #0 : Firebox_X_Edge 0.273150503635 | Zhiyi 0.265224814415
+Optimum 22 #1 : Tractor_Ride 0.250530540943 | Balbier 0.24383173883
+Optimum 22 #2 : Roop_Nagar 0.249480545521 | robdelaney@bloomberg.net 0.241914063692
+Optimum 23 #0 : Astor_Pl 0.272894650698 | gcsbdc@olemiss.edu 0.247337177396
+Optimum 23 #1 : Wagah_Attari_border 0.259328484535 | viarail.ca 0.238492831588
+Optimum 23 #2 : Marc_Van_Dalen 0.258318096399 | Beauharnais 0.237809747458
+Optimum 24 #0 : QB_Nate_Longshore 0.260639339685 | Z##_Camaro 0.253063380718
+Optimum 24 #1 : Luzviminda_Ilagan 0.245633155107 | Crestliner_Cypress_Cay 0.244985803962
+Optimum 24 #2 : Fritjof_Capra 0.241344481707 | ofthat 0.237390547991
+Optimum 25 #0 : Keplin 0.268821358681 | KOMworx 0.267273187637
+Optimum 25 #1 : DPHIQ 0.265357345343 | Journalism_Fellowship 0.263275414705
+Optimum 25 #2 : PCIe_x##_slot 0.247809916735 | National_Conciliator_Esa 0.246373325586
+Optimum 26 #0 : Egoist 0.268974721432 | By_KAREN_LANGLEY 0.28418391943
+Optimum 26 #1 : Bao_Bean 0.261987626553 | Dean_Schnurr 0.272378087044
+Optimum 26 #2 : www.vitalimages.com 0.258653759956 | Jusman 0.244057074189
+Optimum 27 #0 : Powerbrokers 0.253513276577 | Warning_simplexml_load_string_function.simplexml_load 0.247584611177
+Optimum 27 #1 : reputed_Genovese 0.251071035862 | DeLotto 0.240814074874
+Optimum 27 #2 : Ellenore_Scott 0.250574350357 | WakeForestSports.com 0.239638417959
+Optimum 28 #0 : Dave_Labuda 0.271045744419 | SAPF 0.250490188599
+Optimum 28 #1 : ®_Nitro_Jam 0.264482438564 | Ade_Adebisi 0.250172972679
+Optimum 28 #2 : Onaman 0.257634460926 | Ndyomugyenyi 0.24526335299
+Optimum 29 #0 : Jerkbaits 0.273384779692 | champion_Ulises_Solis 0.257713913918
+Optimum 29 #1 : MYH9 0.261173099279 | buoyancy_compensator 0.256714075804
+Optimum 29 #2 : Keith_Edwards_kedwards@centralmaine.com 0.257409930229 | Nate_Hoelscher 0.244567096233
+Optimum 30 #0 : Taylor_Swift_Brad_Paisley 0.266662985086 | Nishma 0.252233564854
+Optimum 30 #1 : Inc._OTCBB_AMLJ 0.262048363686 | Abhor 0.246477395296
+Optimum 30 #2 : singer_Tanya_Tagaq 0.254832327366 | McQuilling 0.242618769407
+Optimum 31 #0 : Robag 0.250217467546 | Tomchick 0.251785337925
+Optimum 31 #1 : Manhattanhenge 0.249677211046 | INVESTORS_SURRENDER_THEIR 0.235641807318
+Optimum 31 #2 : ETC_Punjabi 0.24799862504 | Abalaka 0.23444364965
+Optimum 32 #0 : Alte_Nationalgalerie 0.263707190752 | reconstructive_gastrointestinal 0.259315013885
+Optimum 32 #1 : Unico_Desa 0.258864164352 | WNSC 0.256614029408
+Optimum 32 #2 : Ombadja 0.248943150043 | Nickki 0.25343888998
+Optimum 33 #0 : MRDI 0.278852969408 | Aimag 0.263243317604
+Optimum 33 #1 : Tapbots 0.256014227867 | Nahur 0.256482869387
+Optimum 33 #2 : nemesis_Lex_Luthor 0.251461833715 | prepacking 0.249604165554
+Optimum 34 #0 : Rickard_Gustafson 0.263284981251 | pointperson 0.266958832741
+Optimum 34 #1 : Sling_Adapter 0.248713865876 | firm_Battalia_Winston 0.259418606758
+Optimum 34 #2 : Graedel 0.247542440891 | Suzuki_RMZ### 0.253750324249
+Optimum 35 #0 : HS_Surjeet 0.252841055393 | Die_presserechtliche_Verantwortlichkeit_liegt 0.256722331047
+Optimum 35 #1 : Wakefulness 0.251899540424 | Dragonite 0.245750248432
+Optimum 35 #2 : Healthiest_Employers 0.248222544789 | system_SinoPay_GPP 0.240607112646
+Optimum 36 #0 : Mort_Downey 0.274611115456 | MORe 0.258344471455
+Optimum 36 #1 : PBRA 0.259591937065 | Tienanmen 0.246510446072
+Optimum 36 #2 : Transit_Connect_compact 0.253603816032 | Otaez 0.246055990458
+Optimum 37 #0 : Joelle_Milquet 0.270675301552 | Zatil_Iman_Abdul_Ghani 0.254793733358
+Optimum 37 #1 : Emilio_DeBess 0.258630722761 | SpePharm_Holding_BV 0.251073777676
+Optimum 37 #2 : Nasdaq_UNIS 0.255985021591 | Nondestructive_Evaluation 0.247554674745
+Optimum 38 #0 : Skater_Dog 0.278235554695 | Grunenberg 0.250643908978
+Optimum 38 #1 : Trista_Morrison 0.277374923229 | flaring_embers 0.250149548054
+Optimum 38 #2 : Starkesia 0.272469043732 | Seasonal_Fruit 0.243292152882
+Optimum 39 #0 : Djuricic 0.253689825535 | qualified_assayer_located 0.272143006325
+Optimum 39 #1 : Ali_Youssouf 0.252433657646 | E.ON_EONG.DE 0.257494211197
+Optimum 39 #2 : Abacus_collateralized_debt 0.248659685254 | Conchita_Tan 0.252728223801
+Optimum 40 #0 : retrograde_extrapolation 0.266205698252 | Vontu_DLP 0.248558014631
+Optimum 40 #1 : Pulju 0.251257568598 | Withyman 0.246464639902
+Optimum 40 #2 : Île_de_la 0.245197102427 | beleaguered_Dabhol_power 0.242455348372
+Optimum 41 #0 : Ed_Greenman 0.269469797611 | Sarah_Quita_Offringa 0.26466780901
+Optimum 41 #1 : Marshall_Sylver 0.257203102112 | Laxmanpur 0.257388055325
+Optimum 41 #2 : type_cmd 0.249436885118 | Seirlis 0.245639503002
+Optimum 42 #0 : Marzieh_Vahid_Dastgerdi 0.255747526884 | Avishai_Raviv 0.275797724724
+Optimum 42 #1 : THREE_CHILDREN 0.25335508585 | Luxid_® 0.27012860775
+Optimum 42 #2 : Pehin_Dato_Hj_Abd 0.253014922142 | Magnus_Hansson 0.269595146179
+Optimum 43 #0 : Compro_Tax 0.261960148811 | Jeff_Wulfson 0.264980196953
+Optimum 43 #1 : Discount_Sildenafil_Citrate 0.251812636852 | Mamuka_Gorgodze 0.261255770922
+Optimum 43 #2 : Samsun_Logix 0.248903498054 | Thonburi_Automotive_Assembly 0.245988547802
+Optimum 44 #0 : OJ_Simpson_Jailed 0.268783867359 | Sparkill_NY_Everyone 0.260558485985
+Optimum 44 #1 : Ken_Diamondstone 0.261169195175 | Daniel_Repacholi 0.254879623652
+Optimum 44 #2 : #.##/lb_Ni 0.244588047266 | Composite_Sketch 0.246911257505
+Optimum 45 #0 : General_Jeremiah_Kianga 0.268779456615 | RE_MAX_UNITED 0.264290988445
+Optimum 45 #1 : Damon_Macready 0.249623164535 | Wigderson 0.250003635883
+Optimum 45 #2 : CAUTION_TO_READERS 0.248180240393 | flanker_Phil_Dowson 0.243299126625
+Optimum 46 #0 : Axis_Intermodal 0.237559914589 | delicately_shaded 0.293214529753
+Optimum 46 #1 : Reaches_Pact 0.236999154091 | Christopher_Saridakis 0.260348618031
+Optimum 46 #2 : Abu_Sufiyan 0.233759090304 | Native2_R 0.259407699108
+Optimum 47 #0 : Nowmagazine.co.uk 0.266401082277 | YOOIF 0.262640535831
+Optimum 47 #1 : earthquakes_tidal_waves 0.255768179893 | El_Quijote 0.251822084188
+Optimum 47 #2 : Hameed_Taqi 0.248535379767 | AMORTIZATION_EXPENSE 0.249979883432
+Optimum 48 #0 : Steven_D._Skolsky 0.281343370676 | Ernakulam_Kottayam 0.260883152485
+Optimum 48 #1 : VIDEO_STREAMING 0.269214510918 | Acute_bronchitis 0.254166483879
+Optimum 48 #2 : Curl_beauty_salon 0.254584163427 | ORGANISED_BY_THE 0.253090828657
+Optimum 49 #0 : Quantitative_Approach 0.263997465372 | FIFIELD 0.275489598513
+Optimum 49 #1 : Luis_Caicedo_Velandia 0.262924611568 | woolen_garment 0.24748775363
+Optimum 49 #2 : Settles_Dispute_With 0.253563344479 | Markets_Plunge 0.243774294853
+Optimum 50 #0 : gut_wrenching_sobs 0.254477709532 | Tehrik_Nifaz_i 0.257790982723
+Optimum 50 #1 : Mudville_Gazette 0.248137801886 | Skillet_Meals 0.244334548712
+Optimum 50 #2 : Jade_Castrinos 0.247643530369 | GETTER 0.243507519364
+Optimum 51 #0 : smiley_newlywed 0.259885430336 | dextromethorphan_cough_suppressant 0.255522847176
+Optimum 51 #1 : MIDDLE_SCHOOL_FOOTBALL 0.2485601753 | Al_Qura_mosque 0.255440324545
+Optimum 51 #2 : website_PAGESIX.COM 0.243116527796 | Anganwari_Centres 0.246607929468
+Optimum 52 #0 : idealist_principled 0.282729566097 | Fixing_Scandal 0.267068862915
+Optimum 52 #1 : captured_Qais_Khazali 0.254125058651 | CARY_GRANT 0.25616016984
+Optimum 52 #2 : Mohd_Sayuti 0.24936594069 | THOSE_WHO_HAVE 0.255237013102
+Optimum 53 #0 : Doctored_bin_Laden 0.27008330822 | Il_Grano 0.278966784477
+Optimum 53 #1 : M_Karunandhi 0.267987251282 | Takes_Steps_Toward 0.261381924152
+Optimum 53 #2 : DVD_RENTALS 0.261048257351 | Ahmedin_Jemal_researcher 0.252704560757
+Optimum 54 #0 : Turlock_Ceres 0.263500720263 | T._Almo 0.252275794744
+Optimum 54 #1 : BY_JUDITH_PATTON 0.253964841366 | Wynwood_Walls 0.25175511837
+Optimum 54 #2 : phototoxic_reactions 0.244876816869 | lured_masseuse 0.249374300241
+Optimum 55 #0 : Diamondhead_Casino 0.2644918859 | Guenther_Trieb 0.274671524763
+Optimum 55 #1 : MUSCAT_Omani 0.263190060854 | Atocha_shipwreck 0.260434150696
+Optimum 55 #2 : London_nightspot_Whisky 0.25188434124 | Hacked_iPhones 0.259853363037
+Optimum 56 #0 : Principal_Deb_Wretman 0.246393054724 | brother_Khamis_Khamis 0.255032241344
+Optimum 56 #1 : Roger_Corman_memorably 0.241096094251 | IS_ONCE_AGAIN 0.253430277109
+Optimum 56 #2 : notarized_parental_consent 0.2383223176 | Soldering_Equipment 0.242690056562
+Optimum 57 #0 : DRE_VSE 0.278417050838 | Valentin_Kuptsov 0.244472146034
+^[[A^C^C^C^C^C^CTraceback (most recent call last):
+  File "main.py", line 90, in <module>
+    main(sys.argv)
+  File "main.py", line 85, in main
+    print(sentence)
+  File "/home/nb425/LanguagePrimitive/Maximisation/common/LookupTable.py", line 14, in __exit__
+    del self.lookup_table
+KeyboardInterrupt
+^C^[[A^L
+nb425@tesla:~/LanguagePrimitive/Maximisation$ python main.py --cpu ../../datasets/MR/txt_sentoken/ ../../datasets/word2vec_training/word2vec-GoogleNews-vectors ../CNN/Save_Success_000/
+nb425@tesla:~/LanguagePrimitive/Maximisation$ python main.py --cpu ../../datasets/MR/txt_sentoken/ ../../datasets/word2vec_training/word2vec-GoogleNews-vectors ../CNN/Save_Success_000/
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+Loading word vectors...
+Loading dataset...
+Max sentence length is 179. Sentences will be padded to this size to make the use of batches possible.
+Storing sentences, inputs, and targets...
+Creating static network...
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties:
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:0a:00.0
+Total memory: 11.17GiB
+Free memory: 444.38MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0xf1f9df50
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties:
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:0b:00.0
+Total memory: 11.17GiB
+Free memory: 497.25MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0xf1fa18e0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties:
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:86:00.0
+Total memory: 11.17GiB
+Free memory: 495.38MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0xf1fa5270
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 3 with properties:
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:87:00.0
+Total memory: 11.17GiB
+Free memory: 497.25MiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 3
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 3
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 3 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 3 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 3
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N N
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N N
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y Y
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 3:   N N Y Y
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:0a:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K80, pci bus id: 0000:0b:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K80, pci bus id: 0000:86:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:3) -> (device: 3, name: Tesla K80, pci bus id: 0000:87:00.0)
+Restoring weights...
+Kernel size :                 best_words["values"].append([])
+                best_words["indices"].append([])
+                worst_words["values"].append([])
+                worst_words["indices"].append([])
+Traceback (most recent call last):
+  File "main.py", line 90, in <module>
+    main(sys.argv)
+  File "main.py", line 79, in main
+    x = int(input("Kernel size : "))
+  File "<string>", line 1, in <module>
+NameError: name 'best_words' is not defined
+nb425@tesla:~/LanguagePrimitive/Maximisation$                 best_words["indices"].append([])
+bash: syntax error near unexpected token `[]'
+nb425@tesla:~/LanguagePrimitive/Maximisation$                 worst_words["values"].append([])
+bash: syntax error near unexpected token `[]'
+nb425@tesla:~/LanguagePrimitive/Maximisation$                 worst_words["indices"].append([])
+bash: syntax error near unexpected token `[]'
+nb425@tesla:~/LanguagePrimitive/Maximisation$                 worst_words["indices"].append([])
+nb425@tesla:~/LanguagePrimitive/Maximisation$ python main.py --cpu ../../datasets/MR/txt_sentoken/ ../../datasets/word2vec_training/word2vec-GoogleNews-vectors ../CNN/Save_Success_000/
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+Loading word vectors...
+Loading dataset...
+Max sentence length is 179. Sentences will be padded to this size to make the use of batches possible.
+Storing sentences, inputs, and targets...
+Creating static network...
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties:
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:0a:00.0
+Total memory: 11.17GiB
+Free memory: 444.38MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0xf1e73e30
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties:
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:0b:00.0
+Total memory: 11.17GiB
+Free memory: 497.25MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0xf1e777c0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties:
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:86:00.0
+Total memory: 11.17GiB
+Free memory: 495.38MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0xf1e7b150
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 3 with properties:
+name: Tesla K80
+major: 3 minor: 7 memoryClockRate (GHz) 0.8235
+pciBusID 0000:87:00.0
+Total memory: 11.17GiB
+Free memory: 497.25MiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 3
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 3
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 3 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 3 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 3
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N N
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N N
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y Y
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 3:   N N Y Y
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K80, pci bus id: 0000:0a:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K80, pci bus id: 0000:0b:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K80, pci bus id: 0000:86:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:3) -> (device: 3, name: Tesla K80, pci bus id: 0000:87:00.0)
+Restoring weights...
+Kernel size : 5
+Index : 0
+Maximising neuron...
+Maximizing output
+33.276337       42.970398       43.295715       42.994041       43.752663       42.227875       42.447906       43.6910788      44.122986
+9
+Optimum 0 #0 : powerloom_units 0.355677813292 | San_Gregorio 0.24821549654
+Optimum 0 #1 : Lark_Books 0.298364937305 | writer_Marv_Wolfman 0.247044488788
+Optimum 0 #2 : Peter_Sarstedt 0.267934560776 | Carlo_Ratti_director 0.235768169165
+Optimum 1 #0 : Secaucus 0.220887392759 | Amin_Syam 0.2787733078
+Optimum 1 #1 : envoy_Sergio_Vieira 0.216819107533 | Encompass_RPC 0.274483263493
+Optimum 1 #2 : WE_JUST_WANT 0.214750051498 | Organisational_Learning 0.265204429626
+Optimum 2 #0 : OpenVPN 0.248831912875 | cardiac_rehabilitation 0.264272630215
+Optimum 2 #1 : bottles 0.246408179402 | Eric_Starkloff 0.258996963501
+Optimum 2 #2 : coach_Jon_Urbanchek 0.232695147395 | Trudeaumania 0.256918489933
+Optimum 3 #0 : Greenergy 0.245503678918 | ditchwater 0.275308787823
+Optimum 3 #1 : Bob_Woodward 0.238432854414 | Implementing_Rules 0.251445174217
+Optimum 3 #2 : faintest 0.233897268772 | HarperCollins_imprint_ReganBooks 0.250507563353
+Optimum 4 #0 : Plagued 0.248847559094 | 8U_##U_##U 0.304430127144
+Optimum 4 #1 : Fon_Du_Lac 0.245891526341 | BY_DENISE_SMITH 0.259102880955
+Optimum 4 #2 : Starring_Dakota_Fanning 0.241931319237 | Barrani 0.257981777191
+Optimum 5 #0 : Joely 0.27536046505 | Force_APF 0.259258925915
+Optimum 5 #1 : Cirstea 0.258296489716 | Lehigh_Valley_IronPigs 0.250080704689
+Optimum 5 #2 : Avery_Jukes 0.234844774008 | Aaron_Barmore_##:## 0.246049553156
+Optimum 6 #0 : la_si_citi 0.228219583631 | swtich 0.245878532529
+Optimum 6 #1 : Klinikum_Grosshadern 0.214422136545 | 1st_Dist 0.245155155659
+Optimum 6 #2 : Native_Seeds_SEARCH 0.211796313524 | WELLBUTRIN 0.239955708385
+Optimum 7 #0 : youself 0.285533249378 | Experian_Credit_Default 0.28923791647
+Optimum 7 #1 : Jaime_Cerda 0.26831099391 | Uriminzokkiri_Web 0.282787442207
+Optimum 7 #2 : Felix_Leiter 0.245243698359 | Sarantel_antenna 0.282238304615
+Optimum 8 #0 : Masjid_Tanah 0.27291148901 | Buenzow 0.280975461006
+Optimum 8 #1 : Kembrey 0.25994771719 | Quiet_Logistics 0.255709975958
+Optimum 8 #2 : Outlander_LS 0.257798612118 | minister_Nand_Gopal 0.250682622194
+9
+Optimum 0 #0 : heighten 0.248376309872 | nutshell 0.268303692341
+Optimum 0 #1 : Fantasmic 0.248213082552 | fillip 0.253366470337
+Optimum 0 #2 : Rollies 0.241776019335 | Ryan_Widmer 0.245369657874
+Optimum 1 #0 : President_Takao_Yuhara 0.261695683002 | treated_unequally 0.249462038279
+Optimum 1 #1 : Stocklasa 0.251627773046 | BY_ALLISON_REDMAN 0.249404296279
+Optimum 1 #2 : Faceez 0.248731821775 | hydrolytic 0.242140293121
+Optimum 2 #0 : Patrick_Tiesling 0.238170474768 | DAMASCUS_Syria_Syria 0.273316085339
+Optimum 2 #1 : Casablanca_lilies 0.232522770762 | Burano 0.266122937202
+Optimum 2 #2 : silkworm_moths 0.229749828577 | Schumann_Schubert 0.262036442757
+Optimum 3 #0 : Vijay_Shanthi 0.251870512962 | exhaustingly 0.266995310783
+Optimum 3 #1 : communion 0.238561451435 | neural_precursors 0.2614133358
+Optimum 3 #2 : Sermons 0.233709901571 | Trower 0.261388540268
+^CTraceback (most recent call last):
+  File "main.py", line 90, in <module>
+    main(sys.argv)
+  File "main.py", line 84, in main
+    sentence = maximiser.find_maximising_sentence(word2vec)
+  File "/home/nb425/LanguagePrimitive/Maximisation/common/NeuralNetwork.py", line 276, in find_maximising_sentence
+    min_word = lookup_table.word_to_int.keys()[lookup_table.word_to_int.values().index(worst_words["indices"][i][j])]
+KeyboardInterrupt
+nb425@tesla:~/LanguagePrimitive/Maximisation$ python main.py --cpu ../../datasets/MR/txt_sentoken/ ../../datasets/word2vec_training/word2vec-GoogleNews-vectors ../CNN/Save_Success_000/
+nb425@tesla:~/LanguagePrimitive/Maximisation$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

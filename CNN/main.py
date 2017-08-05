@@ -7,14 +7,41 @@ from common import LookupTable as lt
 
 ### Constants ###
 EARLY_STOPPING__STRIP_LENGTH = 1
-EARLY_STOPPING__INCREASES = 6
+EARLY_STOPPING__INCREASES = 3
 CROSS_VALIDATION__FOLD = 10
 CROSS_VALIDATION__TEST_COUNT = 1
 
 def main(argv):
+    use_gpu = None
+    load_as_CR = None
+
+    if "--gpu" in argv:
+        del argv[argv.index("--gpu")]
+        use_gpu = True
+    if "--cpu" in argv:
+        if not use_gpu is None:
+            print("Please specify either the --gpu or --cpu option.")
+            return
+        del argv[argv.index("--cpu")]
+        use_gpu = False
+    if use_gpu == None:
+        use_gpu = True
     if (len(argv) < 3):
         print("Please specify the folder containing the dataset and the file containing the word2vec dictionnary :")
         print("main.py <dataset> <word2vec>")
+        return
+
+    if "--CR" in argv:
+        del argv[argv.index("--CR")]
+        load_as_CR = True
+    if "--MR" in argv:
+        if not load_as_CR is None:
+            print("Please specify either the --CR or --MR option.")
+            return
+        del argv[argv.index("--MR")]
+        load_as_CR = False
+    if load_as_CR == None:
+        print("Please specify either the --CR or --MR option.")
         return
 
     random.seed()
@@ -29,44 +56,12 @@ def main(argv):
         ### Loading dataset ###
         print("Loading dataset...")
         data = parser.load_dataset(argv[1])
-
-        integer_sentences = [[], []]
-        max_sentence_length = max(len(line) for label in data for file in data[label] for line in data[label][file])
-        print("Max sentence length is {0}. Sentences will be padded to this size to make the use of batches possible.".format(max_sentence_length))
-        for i, label in enumerate(data):
-            for k in xrange(CROSS_VALIDATION__FOLD):
-                integer_sentences[i].append([])
-            for file in data[label]:
-                cv_set = int(file[2:5]) / 100
-                for line in data[label][file]:
-                    integer_sentences[i][cv_set].append(word2vec.convertSentence(line, max_sentence_length))
+        if load_as_CR:
+            integer_sentences, max_sentence_length = load_dataset_as_CR(data, word2vec)
+        else:
+            integer_sentences, max_sentence_length = load_dataset_as_MR(data, word2vec)
 
         # Create cv set
-        #print("Creating cross-validation subset...")
-        #positive_reviews = len(integer_sentences[0])
-        #negative_reviews = len(integer_sentences[1])
-        #cv_reviews = (positive_reviews + negative_reviews) / CROSS_VALIDATION__FOLD
-        
-        #print("\tFound {0} positive and {1} negative reviews...".format(positive_reviews, negative_reviews))
-        #print("\tSplitting dataset in {0} subsets of {1} reviews each...".format(CROSS_VALIDATION__FOLD, cv_reviews))
-
-        #for k in xrange(CROSS_VALIDATION__FOLD):
-        #    data_subsets.append({ "input" : [], "target" : [] })
-        #    for i in xrange(cv_reviews):
-        #        sample_class = None
-        #        if len(integer_sentences[0]) == 0:
-        #            sample_class = 1
-        #        elif len(integer_sentences[1]) == 0:
-        #            sample_class = 0
-        #        else:
-        #            sample_class = random.randint(0, len(integer_sentences) - 1)
-        #        sentence = 0
-        #        if (len(integer_sentences[sample_class]) - 1) > 0:
-        #            sentence = random.randint(0, len(integer_sentences[sample_class]) - 1)
-        #        data_subsets[k]["input"].append(integer_sentences[sample_class][sentence])
-        #        data_subsets[k]["target"].append([1.0, 0.0] if sample_class == 0 else [0.0, 1.0])
-        #        del integer_sentences[sample_class][sentence]
-
         for k in xrange(CROSS_VALIDATION__FOLD):
             data_subsets.append({ "input" : [], "target" : [] })
             for class_idx in xrange(2):
@@ -81,7 +76,8 @@ def main(argv):
                                           vocabulary_size = word2vec.getVocabularySize(),
                                           sentence_length = max_sentence_length,
                                           dictionnary = word2vec.getLookupTable(),
-                                          is_trainable = True)
+                                          is_trainable = True,
+                                          gpu = use_gpu)
 
     print("Training network...")
     final_errors = []
@@ -109,9 +105,6 @@ def main(argv):
                     min_error = validation_error[-1]
                     neural_network.save("./SAVE_" + str(k) + "/Save")
                 if len(validation_error) > 1:
-                    #if (validation_error[-1] - validation_error[-2]) < 0.001:
-                    #    print("\tIncrease in validation error is too low.")
-                    #    break
                     if validation_error[-1] > validation_error[-2]:
                         increase_strip += 1
                         if increase_strip == EARLY_STOPPING__INCREASES:
@@ -138,6 +131,53 @@ def shuffle_paired_sets(a, b):
     tmp = list(zip(a, b))
     random.shuffle(tmp)
     return zip(*tmp)
+
+def load_dataset_as_MR(data, word2vec):
+
+    integer_sentences = [[], []]
+    max_sentence_length = max(len(line) for label in data for file in data[label] for line in data[label][file])
+    print("Max sentence length is {0}. Sentences will be padded to this size to make the use of batches possible.".format(max_sentence_length))
+    for i, label in enumerate(data):
+        for k in xrange(CROSS_VALIDATION__FOLD):
+            integer_sentences[i].append([])
+        for file in data[label]:
+            cv_set = int(file[2:5]) / 100
+            for line in data[label][file]:
+                integer_sentences[i][cv_set].append(word2vec.convertSentence(line, max_sentence_length))
+    return integer_sentences, max_sentence_length
+
+def load_dataset_as_CR(data, word2vec):
+
+    integer_sentences = [[], []]
+    max_sentence_length = max(len(line) for file in data for line in data[file])
+    for i in xrange(2):
+        for k in xrange(CROSS_VALIDATION__FOLD):
+            integer_sentences[i].append([])
+    for file in data:
+        for line in data[file]:
+            for k in xrange(len(line)):
+                if "##" in line[k]:
+                    line_strip = line[k].split("##")
+                    line_info = line_strip[0]
+                    line[k] = line_strip[1]
+                    for n in xrange(k):
+                        del line[0]
+                    if "[+" in line_info:
+                        if not "[-" in line_info:
+                            integer_sentences[0][0].append(word2vec.convertSentence(line, max_sentence_length))
+                    elif "[-" in line_info:
+                        integer_sentences[1][0].append(word2vec.convertSentence(line, max_sentence_length))
+                    break
+
+    # Shuffle sets
+    print("Splitting reviews in {0} random subsets".format(CROSS_VALIDATION__FOLD))
+    for i in xrange(2):
+        for k in xrange(1, CROSS_VALIDATION__FOLD):
+            for n in xrange(len(integer_sentences[i][0]) / CROSS_VALIDATION__FOLD):
+                elem_index = random.randint(0, len(integer_sentences[i][0]) - 1)
+                integer_sentences[i][k].append(integer_sentences[i][0][elem_index])
+                del integer_sentences[i][0][elem_index]
+    return integer_sentences, max_sentence_length
 
 if __name__ == "__main__":
     main(sys.argv)

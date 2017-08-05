@@ -4,6 +4,7 @@ import numpy as np
 class LookupTable:
     def __init__(self):
         self.word_to_int = dict()
+        self.int_to_word = dict()
         self.lookup_table = []
         self.vector_dimension = 0
         return
@@ -12,6 +13,7 @@ class LookupTable:
         return self
     def __exit__(self, *err):
         del self.lookup_table
+        del self.int_to_word
         del self.word_to_int
         return
 
@@ -33,26 +35,32 @@ class LookupTable:
                 if c != '\n':
                     word += c
             self.word_to_int[word] = i
+            self.int_to_word[i] = word
             self.lookup_table.append(np.fromstring(file.read(vector_size), dtype='float32'))
         return
 
     def lookup(self, word):
-        return self.lookup_table[word]
+        return self.lookup_table[self.word_to_int[word.lower()]]
 
-    def lookup_int(self, word):
-        return self.lookup_table[word]
+    def reverse_lookup(self, word_as_int):
+        return self.int_to_word[word_as_int]
+
+    def lookup_int(self, word_as_int):
+        return self.lookup_table[word_as_int]
 
     def convertSentence(self, sentence, padded_length):
         sentence_integers = []
-        for word in sentence:
+        for base_word in sentence:
+            word = base_word.lower()
             if not word in self.word_to_int:
-                self.word_to_int[word] = len(self.lookup_table)
+                index = len(self.lookup_table)
+                self.word_to_int[word] = index
+                self.int_to_word[index] = word
                 self.lookup_table.append(np.random.uniform(-0.5, 0.5, self.vector_dimension)) #### DEBUG ???
             sentence_integers.append(self.word_to_int[word])
         while len(sentence_integers) < padded_length:
             sentence_integers.append(0)
         return sentence_integers
-
 
     def getWordDimension(self):
         return self.vector_dimension
