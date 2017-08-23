@@ -1,6 +1,7 @@
 
 # This script trains the neural network using the appropriate datasets and saves its weights for further use in other scripts. #
 # The model it uses is similar to that of Kim Yoon, 2014, but rebuilt with TensorFlow for more ease during its exploration.
+# - Created by Nicolas Bachour, 2017
 # ------------------------ #
 
 import sys

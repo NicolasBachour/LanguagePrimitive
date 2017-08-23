@@ -1,5 +1,6 @@
 
 # A simple class which serves as an interface to the word2vec dictionnary, also handling integer association and new vocabulary integration #
+# - Created by Nicolas Bachour, 2017
 # ------------------------ #
 
 import numpy as np

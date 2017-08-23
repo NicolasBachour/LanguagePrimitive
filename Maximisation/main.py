@@ -1,6 +1,7 @@
 
 # This script maximises the output of a specific - or all - kernel(s), and displays the words which are most similar and most dissimilar to the obtained vector. #
 # It allows us to explore the information encoded by kernels.
+# - Created by Nicolas Bachour, 2017
 # ------------------------ #
 
 import sys

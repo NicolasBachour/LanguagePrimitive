@@ -1,6 +1,7 @@
 
 # This script computes the variance of the activation of the kernels, aiming to establish which kernles are the most representative. #
-# ------------------------ #
+# - Created by Nicolas Bachour, 2017
+# # ------------------------ #
 
 import sys
 import os

@@ -1,5 +1,6 @@
 
 # An utility class to explore files in the filesystem.
+# - Created by Nicolas Bachour, 2017
 # ------------------------ #
 
 import os

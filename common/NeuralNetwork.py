@@ -1,5 +1,6 @@
 
 # A class that builds a neural network using the model from Kim Yoon, 2014, using TensorFlow, and provides various utilities to save and explore it #
+# - Created by Nicolas Bachour, 2017
 # ------------------------ #
 
 from sys import stdout

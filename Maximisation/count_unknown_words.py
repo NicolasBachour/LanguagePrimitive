@@ -1,5 +1,6 @@
 
 # This script computes basic statistics about the number of words present in the dataset and the word2vec dictionnary. #
+# - Created by Nicolas Bachour, 2017
 # ------------------------ #
 
 import sys

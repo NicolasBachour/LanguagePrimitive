@@ -1,5 +1,6 @@
 
 # A simple class that builds python dictionnaries containing the directory structure of a given folder #
+# - Created by Nicolas Bachour, 2017
 # ------------------------ #
 
 import os
