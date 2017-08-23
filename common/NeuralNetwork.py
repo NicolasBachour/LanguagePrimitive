@@ -1,4 +1,7 @@
 
+# A class that builds a neural network using the model from Kim Yoon, 2014, using TensorFlow, and provides various utilities to save and explore it #
+# ------------------------ #
+
 from sys import stdout
 
 import os
@@ -79,7 +82,6 @@ class NeuralNetwork:
 
         self.hidden_layer_grads_and_vars = self.optimiser.compute_gradients(self.loss, [self.hidden_layer_weights, self.hidden_layer_bias])
         self.capped_grads_and_vars = [(tf.clip_by_norm(gv[0], clip_norm = 3.0, axes = [0]), gv[1]) for gv in self.hidden_layer_grads_and_vars]
-        #self.capped_grads_and_vars = self.grads_and_vars
 
         self.optimisation_step = self.optimiser.apply_gradients(self.grads_and_vars)
         self.optimisation_step2 = self.optimiser.apply_gradients(self.capped_grads_and_vars, global_step = self.global_step)
@@ -137,22 +139,13 @@ class NeuralNetwork:
         begin = 0
         end = subdivision
 
-        print(self.convolution_3_output)
-        print(self.convolution_4_output)
-        print(self.convolution_5_output)
         summed_squared_activation_3 = tf.reduce_mean(tf.square(self.convolution_3_output), [1, 2])
         summed_squared_activation_4 = tf.reduce_mean(tf.square(self.convolution_4_output), [1, 2])
         summed_squared_activation_5 = tf.reduce_mean(tf.square(self.convolution_5_output), [1, 2])
-        print(summed_squared_activation_3)
-        print(summed_squared_activation_4)
-        print(summed_squared_activation_5)
 
         summed_activation_3 = tf.reduce_mean(self.convolution_3_output, [1, 2])
         summed_activation_4 = tf.reduce_mean(self.convolution_4_output, [1, 2])
         summed_activation_5 = tf.reduce_mean(self.convolution_5_output, [1, 2])
-        print(summed_activation_3)
-        print(summed_activation_4)
-        print(summed_activation_5)
 
         Sssa3, Sssa4, Sssa5, Ssa3, Ssa4, Ssa5 = (None, None, None, None, None, None)
 

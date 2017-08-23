@@ -1,5 +1,6 @@
 
-# Utility class to explore files
+# An utility class to explore files in the filesystem.
+# ------------------------ #
 
 import os
 
@@ -11,7 +12,6 @@ class DirectoryStack:
 
     def pushd(self, dir):
         os.chdir(dir)
-        #DEBUG : print("--- Entering " + dir)
         self.stack.append(os.path.abspath("./"))
         return
     
@@ -23,6 +23,5 @@ class DirectoryStack:
 
     def popd(self):
         dir = self.stack.pop()
-        #DEBUG : print("--- Returning to " + self.getd())
         os.chdir(self.getd())
         return dir

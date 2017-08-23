@@ -1,4 +1,8 @@
 
+# This script trains the neural network using the appropriate datasets and saves its weights for further use in other scripts. #
+# The model it uses is similar to that of Kim Yoon, 2014, but rebuilt with TensorFlow for more ease during its exploration.
+# ------------------------ #
+
 import sys
 import random
 from common import parser
@@ -6,11 +10,16 @@ from common import NeuralNetwork as nn
 from common import LookupTable as lt
 
 ### Constants ###
+# Variable determining the number of training epochs which trigger an evaluation of the network's accuracy
 EARLY_STOPPING__STRIP_LENGTH = 1
+# Number of increases in the validation accuracy of the network which will end the training process
 EARLY_STOPPING__INCREASES = 3
+# Number of subsets in which the data are split for cross-validation
 CROSS_VALIDATION__FOLD = 10
-CROSS_VALIDATION__TEST_COUNT = 1
+# Number of subsets on which the network final accuracy is evaluated
+CROSS_VALIDATION__TEST_COUNT = 1 # The value here is 1 instead of 10, since we do not insist on proving that our network is consistently efficient.
 
+### Program entry point ###
 def main(argv):
     use_gpu = None
     load_as_CR = None
@@ -26,10 +35,6 @@ def main(argv):
         use_gpu = False
     if use_gpu == None:
         use_gpu = True
-    if (len(argv) < 3):
-        print("Please specify the folder containing the dataset and the file containing the word2vec dictionnary :")
-        print("main.py <dataset> <word2vec>")
-        return
 
     if "--CR" in argv:
         del argv[argv.index("--CR")]
@@ -42,6 +47,10 @@ def main(argv):
         load_as_CR = False
     if load_as_CR == None:
         print("Please specify either the --CR or --MR option.")
+        return
+    if (len(argv) < 3):
+        print("Please specify the folder containing the dataset and the file containing the word2vec dictionnary :")
+        print("main.py <dataset> <word2vec>")
         return
 
     random.seed()
@@ -61,7 +70,7 @@ def main(argv):
         else:
             integer_sentences, max_sentence_length = load_dataset_as_MR(data, word2vec)
 
-        # Create cv set
+        # Create CV sets
         for k in xrange(CROSS_VALIDATION__FOLD):
             data_subsets.append({ "input" : [], "target" : [] })
             for class_idx in xrange(2):
@@ -169,7 +178,7 @@ def load_dataset_as_CR(data, word2vec):
                         integer_sentences[1][0].append(word2vec.convertSentence(line, max_sentence_length))
                     break
 
-    # Shuffle sets
+    # Split data into random subsets
     print("Splitting reviews in {0} random subsets".format(CROSS_VALIDATION__FOLD))
     for i in xrange(2):
         for k in xrange(1, CROSS_VALIDATION__FOLD):

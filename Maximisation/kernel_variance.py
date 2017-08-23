@@ -1,4 +1,7 @@
 
+# This script computes the variance of the activation of the kernels, aiming to establish which kernles are the most representative. #
+# ------------------------ #
+
 import sys
 import os
 from common import parser
@@ -6,6 +9,7 @@ from common import NeuralNetwork as nn
 from common import LookupTable as lt
 import main
 
+### Program entry point ###
 def kernel_variance(argv):
     use_gpu = None
     load_as_CR = None

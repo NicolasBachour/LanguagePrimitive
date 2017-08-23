@@ -1,12 +1,19 @@
 
+# This script maximises the output of a specific - or all - kernel(s), and displays the words which are most similar and most dissimilar to the obtained vector. #
+# It allows us to explore the information encoded by kernels.
+# ------------------------ #
+
 import sys
 import os
 from common import parser
 from common import NeuralNetwork as nn
 from common import LookupTable as lt
 
-MAXIMISER_INSTANCES = 9 # Should be 9
+### Constants ###
+# Global variable defining the number of local optimum searched for a given kernel
+MAXIMISER_INSTANCES = 9
 
+### Program entry point ###
 def main(argv):
     use_gpu = None
     load_as_CR = None
@@ -93,6 +100,7 @@ def main(argv):
                     print(sentence)
     return
 
+### Function to load the dataset with the format of the MR dataset.
 def load_dataset_as_MR(data, word2vec):
     sentence_set = {
         "char" : [],
@@ -112,6 +120,7 @@ def load_dataset_as_MR(data, word2vec):
                 sentence_set["target"].append([1.0, 0.0] if i == 0 else [0.0, 1.0])
     return sentence_set, max_sentence_length
 
+### Function to load the dataset with the format of the CR dataset
 def load_dataset_as_CR(data, word2vec):
     sentence_set = {
         "char" : [],

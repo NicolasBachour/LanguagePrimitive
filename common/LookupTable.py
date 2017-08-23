@@ -1,4 +1,7 @@
 
+# A simple class which serves as an interface to the word2vec dictionnary, also handling integer association and new vocabulary integration #
+# ------------------------ #
+
 import numpy as np
 
 class LookupTable:
@@ -56,7 +59,7 @@ class LookupTable:
                 index = len(self.lookup_table)
                 self.word_to_int[word] = index
                 self.int_to_word[index] = word
-                self.lookup_table.append(np.random.uniform(-0.5, 0.5, self.vector_dimension)) #### DEBUG ???
+                self.lookup_table.append(np.random.uniform(-0.5, 0.5, self.vector_dimension))
             sentence_integers.append(self.word_to_int[word])
         while len(sentence_integers) < padded_length:
             sentence_integers.append(0)

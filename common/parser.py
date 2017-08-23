@@ -1,4 +1,7 @@
 
+# A simple class that builds python dictionnaries containing the directory structure of a given folder #
+# ------------------------ #
+
 import os
 import collections
 import DirectoryStack as utils

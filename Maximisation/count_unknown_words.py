@@ -1,10 +1,14 @@
 
+# This script computes basic statistics about the number of words present in the dataset and the word2vec dictionnary. #
+# ------------------------ #
+
 import sys
 import os
 from common import parser
 from common import LookupTable as lt
 import main
 
+### Program entry point ###
 def count_main(argv):
     load_as_CR = None
     if "--CR" in argv:
